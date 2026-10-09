@@ -91,6 +91,7 @@ h1 span{color:var(--gold)}
 .jersey::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(255,255,255,.18),rgba(0,0,0,.45) 75%);z-index:0}
 .jersey .art{position:absolute;inset:6px 0 0 0;display:grid;place-items:center;z-index:1}.sprite{image-rendering:pixelated;image-rendering:crisp-edges;opacity:0;transition:opacity .15s}
 .sprite.ready{opacity:1}
+.sprite.art-img{image-rendering:auto}
 .sprite.big{width:128px;height:128px;margin-top:-6px;filter:drop-shadow(0 3px 0 rgba(0,0,0,.28));animation:idle 1.6s steps(2,jump-none) infinite}
 .choice:nth-child(2) .sprite.big{animation-delay:-.5s}.choice:nth-child(3) .sprite.big{animation-delay:-1s}
 @keyframes idle{0%{transform:translateY(0) scaleY(1)}100%{transform:translateY(-2px) scaleY(1.02)}}
@@ -649,7 +650,9 @@ function spriteSrc(p){
     img.src=url;}
   return null;
 }
-function spriteImg(p,cls){const s=spriteSrc(p);return `<img class="sprite ${cls}${s?" ready":""}" data-sid="${p.id}" src="${s||BLANK}" alt="" width="${SPR}" height="${SPR}">`;}
+/* Illustrated art from tools/generate_sprites.py, when present; build.py fills this list. */
+const ART_IDS = new Set([]);
+function spriteImg(p,cls){if(ART_IDS.has(p.id))return `<img class="sprite art-img ready ${cls}" src="sprites/${String(p.id).padStart(3,"0")}.png" alt="" width="${SPR}" height="${SPR}">`;const s=spriteSrc(p);return `<img class="sprite ${cls}${s?" ready":""}" data-sid="${p.id}" src="${s||BLANK}" alt="" width="${SPR}" height="${SPR}">`;}
 const typeTags = p=>p.types.map(t=>`<span class="type" style="background:${TYPE_COLORS[t]}">${t}</span>`).join("");
 
 function renderMeta(){
