@@ -89,7 +89,13 @@ h1 span{color:var(--gold)}
   clip-path:polygon(22% 0,36% 0,42% 9%,58% 9%,64% 0,78% 0,100% 16%,100% 100%,0 100%,0 16%)}
 .jersey::after{content:"";position:absolute;inset:auto 0 6px 0;height:8px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.55) 0 22%,transparent 22% 26%);opacity:.5}
 .jersey::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(255,255,255,.18),rgba(0,0,0,.45) 75%);z-index:0}
-.jersey .art{position:absolute;inset:6px 0 0 0;display:grid;place-items:center;z-index:1}.jersey .art svg{height:158px;width:158px;margin-top:-14px;max-width:100%;filter:drop-shadow(0 2px 0 rgba(0,0,0,.2))}
+.jersey .art{position:absolute;inset:6px 0 0 0;display:grid;place-items:center;z-index:1}.sprite{image-rendering:pixelated;image-rendering:crisp-edges;opacity:0;transition:opacity .15s}
+.sprite.ready{opacity:1}
+.sprite.big{width:128px;height:128px;margin-top:-6px;filter:drop-shadow(0 3px 0 rgba(0,0,0,.28));animation:idle 1.6s steps(2,jump-none) infinite}
+.choice:nth-child(2) .sprite.big{animation-delay:-.5s}.choice:nth-child(3) .sprite.big{animation-delay:-1s}
+@keyframes idle{0%{transform:translateY(0) scaleY(1)}100%{transform:translateY(-2px) scaleY(1.02)}}
+.choice:hover .sprite.big{animation-duration:.5s}
+.jersey .art::after{content:"";position:absolute;bottom:14px;left:50%;width:64px;height:8px;margin-left:-32px;background:repeating-linear-gradient(90deg,rgba(0,0,0,.35) 0 4px,rgba(0,0,0,.25) 4px 8px);border-radius:2px;z-index:-1}
 .jnum{position:absolute;left:10px;top:22px;z-index:2;font-family:var(--f-display);font-size:13px;line-height:1;color:#fff;background:rgba(0,0,0,.35);border-radius:4px;padding:3px 6px}
 .legend{position:absolute;top:24px;right:10px;font-size:10px;font-weight:800;letter-spacing:.12em;background:rgba(0,0,0,.45);color:var(--gold);border-radius:4px;padding:2px 6px}
 .cbody{padding:12px 12px 14px;display:flex;flex-direction:column;gap:8px;flex:1}
@@ -125,7 +131,7 @@ h1 span{color:var(--gold)}
 .chip{position:absolute;transform:translate(-50%,-50%);width:9.6%;min-width:30px;display:flex;flex-direction:column;align-items:center;gap:1px;text-align:center}
 .dot{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:10px;font-weight:800;border:2px dashed rgba(238,243,234,.35);color:var(--chalk-dim);background:rgba(0,0,0,.25);letter-spacing:.02em}
 .chip.filled .dot{width:40px;height:40px;border:2px solid rgba(255,255,255,.85);background:radial-gradient(circle at 50% 40%,rgba(255,255,255,.28),rgba(0,0,0,.35));overflow:hidden}
-.chip.filled .dot svg{width:100%;height:100%;transform:scale(1.25) translateY(-4%)}
+.chip.filled .dot .sprite{width:118%;height:118%;max-width:none;image-rendering:auto;transform:translateY(-4%)}
 .chip .sub b{font-weight:800}
 .chip.now .dot{border:2px solid var(--gold);color:var(--gold);box-shadow:0 0 0 4px rgba(242,193,78,.25);animation:pulse 1.2s ease-in-out infinite}
 @keyframes pulse{50%{box-shadow:0 0 0 8px rgba(242,193,78,.08)}}
@@ -580,6 +586,70 @@ function creature(p){
   SIG_NAME.set(p.id,{gem:"Chest gem",runes:"Glowing runes",mane:"Mane",scarf:"Scarf",antlers:"Crystal antlers",freckles:"Glow freckles",shell:"Back shell",ribbon:"Tail ribbon",orbit:"Orbit ring",lantern:"Lantern orb",paint:"Face paint"}[sig]);
   svgCache.set(p.id,svg); return svg;
 }
+/* ---------- pixel-art sprite renderer ----------
+   Rasterizes each original creature to a 64x64 grid, then applies sprite-art rules:
+   reduced palette (median cut), ordered dithering, 1px outline, rim light and shade. */
+const SPR=64, spriteCache=new Map(), spritePending=new Set();
+const BLANK="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7";
+const BAYER=[0,8,2,10,12,4,14,6,3,11,1,9,15,7,13,5];
+function medianCut(px,n){
+  let boxes=[px];
+  while(boxes.length<n){
+    let bi=-1,br=-1,bc=0;
+    boxes.forEach((b,i)=>{if(b.length<2)return;for(let c=0;c<3;c++){let lo=255,hi=0;for(const p of b){if(p[c]<lo)lo=p[c];if(p[c]>hi)hi=p[c]}if(hi-lo>br){br=hi-lo;bi=i;bc=c}}});
+    if(bi<0||br<12)break;
+    const b=boxes[bi].sort((x,y)=>x[bc]-y[bc]), m=b.length>>1;
+    boxes.splice(bi,1,b.slice(0,m),b.slice(m));
+  }
+  return boxes.map(b=>{const s=[0,0,0];b.forEach(p=>{s[0]+=p[0];s[1]+=p[1];s[2]+=p[2]});return s.map(v=>Math.round(v/b.length))});
+}
+const lum=c=>c[0]*.299+c[1]*.587+c[2]*.114;
+const mix=(c,f)=>f<0?c.map(v=>Math.round(v*(1+f))):c.map(v=>Math.round(v+(255-v)*f));
+function pixelize(img){
+  // crop to the creature's outline so small creatures keep their detail
+  const HR=256, hc=document.createElement("canvas");hc.width=hc.height=HR;
+  const hx=hc.getContext("2d",{willReadFrequently:true}); hx.drawImage(img,0,0,HR,HR);
+  const hd=hx.getImageData(0,0,HR,HR).data; let x0=HR,y0=HR,x1=0,y1=0;
+  for(let y=0;y<HR;y++)for(let x=0;x<HR;x++)if(hd[(y*HR+x)*4+3]>150){if(x<x0)x0=x;if(x>x1)x1=x;if(y<y0)y0=y;if(y>y1)y1=y}
+  const cv=document.createElement("canvas");cv.width=cv.height=SPR;
+  const cx=cv.getContext("2d",{willReadFrequently:true}); cx.imageSmoothingEnabled=true;
+  if(x1>x0){const w=x1-x0+1,h=y1-y0+1,target=img.dataset.size*1,k=target/Math.max(w,h),dw=w*k,dh=h*k;
+    cx.drawImage(hc,x0,y0,w,h,Math.round((SPR-dw)/2),Math.round(SPR-2-dh),dw,dh);}
+  const id=cx.getImageData(0,0,SPR,SPR), d=id.data, N=SPR*SPR;
+  const op=new Uint8Array(N), px=[];
+  for(let i=0;i<N;i++){if(d[i*4+3]>=150){op[i]=1;px.push([d[i*4],d[i*4+1],d[i*4+2]])}}
+  if(!px.length)return cv.toDataURL();
+  const pal=medianCut(px,12);
+  const out=new Array(N);
+  for(let y=0;y<SPR;y++)for(let x=0;x<SPR;x++){const i=y*SPR+x;if(!op[i])continue;
+    const c=[d[i*4],d[i*4+1],d[i*4+2]];let a=null,b=null,da=1e9,db=1e9;
+    for(const q of pal){const dd=(q[0]-c[0])**2+(q[1]-c[1])**2+(q[2]-c[2])**2;if(dd<da){db=da;b=a;da=dd;a=q}else if(dd<db){db=dd;b=q}}
+    const t=Math.sqrt(da)/(Math.sqrt(da)+Math.sqrt(db)+1e-6);
+    out[i]=(b&&t>.32+.18*(BAYER[(y%4)*4+x%4]/16))?b:a;}
+  const dark=pal.reduce((m,c)=>lum(c)<lum(m)?c:m,pal[0]), outline=mix(dark,-.55);
+  const at=(x,y)=>x>=0&&y>=0&&x<SPR&&y<SPR&&op[y*SPR+x];
+  const res=cx.createImageData(SPR,SPR), r=res.data;
+  for(let y=0;y<SPR;y++)for(let x=0;x<SPR;x++){const i=y*SPR+x;let c=null;
+    if(op[i]){c=out[i];
+      const edgeTL=!at(x-1,y)||!at(x,y-1), edgeBR=!at(x+1,y)||!at(x,y+1);
+      if(edgeTL&&!edgeBR)c=mix(c,.28); else if(edgeBR&&!edgeTL)c=mix(c,-.3);}
+    else if(at(x-1,y)||at(x+1,y)||at(x,y-1)||at(x,y+1))c=outline;
+    if(c){r[i*4]=c[0];r[i*4+1]=c[1];r[i*4+2]=c[2];r[i*4+3]=255}}
+  cx.putImageData(res,0,0); return cv.toDataURL("image/png");
+}
+function spriteSrc(p){
+  if(spriteCache.has(p.id))return spriteCache.get(p.id);
+  if(!spritePending.has(p.id)){spritePending.add(p.id);
+    const svg=creature(p).replace("<svg ",`<svg width="${SPR*2}" height="${SPR*2}" `);
+    const url=URL.createObjectURL(new Blob([svg],{type:"image/svg+xml"})), img=new Image();
+    img.dataset.size=Math.round(42+16*Math.max(0,Math.min(1,Math.log10(p.wt*.2205+1)/3)));
+    img.onload=()=>{let u=BLANK;try{u=pixelize(img)}catch(e){}URL.revokeObjectURL(url);spriteCache.set(p.id,u);spritePending.delete(p.id);
+      document.querySelectorAll(`img[data-sid="${p.id}"]`).forEach(el=>{el.src=u;el.classList.add("ready")});};
+    img.onerror=()=>{spritePending.delete(p.id);URL.revokeObjectURL(url)};
+    img.src=url;}
+  return null;
+}
+function spriteImg(p,cls){const s=spriteSrc(p);return `<img class="sprite ${cls}${s?" ready":""}" data-sid="${p.id}" src="${s||BLANK}" alt="" width="${SPR}" height="${SPR}">`;}
 const typeTags = p=>p.types.map(t=>`<span class="type" style="background:${TYPE_COLORS[t]}">${t}</span>`).join("");
 
 function renderMeta(){
@@ -599,7 +669,7 @@ function renderField(){
     const r = S.roster[s.id];
     if (r){
       const p = byId.get(r.id);
-      h += `<div class="chip filled" style="left:${s.x}%;top:${s.y}%;${colors(p)}" title="${esc(s.id)}: ${esc(p.name)} (${r.ovr} OVR)"><div class="dot">${creature(p)}</div><div class="nm">${esc(p.name)}</div><div class="sub">${s.id} · <b class="${oClass(r.ovr)}">${r.ovr}</b></div></div>`;
+      h += `<div class="chip filled" style="left:${s.x}%;top:${s.y}%;${colors(p)}" title="${esc(s.id)}: ${esc(p.name)} (${r.ovr} OVR)"><div class="dot">${spriteImg(p,"mini")}</div><div class="nm">${esc(p.name)}</div><div class="sub">${s.id} · <b class="${oClass(r.ovr)}">${r.ovr}</b></div></div>`;
     } else {
       const now = S.phase==="draft" && S.slot===s.id;
       h += `<div class="chip${now?" now":""}" style="left:${s.x}%;top:${s.y}%"><div class="dot">${s.id}</div>${now?'<div class="sub" style="color:var(--gold)">on the clock</div>':""}</div>`;
@@ -639,7 +709,7 @@ function card(p, roleKey){
   const R = ROLES[roleKey], {ovr,notes} = rate(p, roleKey);
   const stats = p.st.map((v,i)=>`<span>${STAT_NAMES[i]}</span><i class="${R.key.includes(i)?"key":""}" style="--w:${Math.min(100,v/1.6)}%"></i><em>${v}</em>`).join("");
   return `<button class="choice" data-id="${p.id}" style="${colors(p)}" aria-label="Draft ${esc(p.name)}">
-    <div class="jersey"><div class="art">${creature(p)}</div><span class="jnum">#${String(p.id).padStart(3,"0")}</span>${p.leg?'<span class="legend">LEGEND</span>':""}</div>
+    <div class="jersey"><div class="art">${creature(p)&&spriteImg(p,"big")}</div><span class="jnum">#${String(p.id).padStart(3,"0")}</span>${p.leg?'<span class="legend">LEGEND</span>':""}</div>
     <div class="cbody">
       <div class="cname"><b>${esc(p.name)}</b><span class="ovr ${S.blind?"hide":oClass(ovr)}">${S.blind?"??":ovr}<small>OVR</small></span></div>
       <div class="types">${typeTags(p)}</div>
