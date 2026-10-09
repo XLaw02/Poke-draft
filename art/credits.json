@@ -1,10 +1,10 @@
 {
  "001": {
-  "name": "Monster #26",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
-  "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "name": "Reptile 2",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "002": {
   "name": "Anoleaf",
@@ -14,11 +14,11 @@
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
  "003": {
-  "name": "Monster #56 (alt colors)",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
-  "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "name": "Reptile 4",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "004": {
   "name": "Monster #34 (alt colors)",
@@ -40,6 +40,34 @@
   "credit": "Original design by Cavalcadeur. Sprites by rsg167. Face sprites tweaked by Sanglorian. Other sprites by Cavalcadeur. Overland sprite from the Superpowers Asset Packs.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "007": {
+  "name": "Monster #28 (alt colors)",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "008": {
+  "name": "Monster #46",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "009": {
+  "name": "Creature 38",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "010": {
+  "name": "Creature 7",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
  },
  "011": {
   "name": "Sharpfin",
@@ -76,19 +104,26 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "016": {
+  "name": "Demon 2",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
  "017": {
-  "name": "Monster #46",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+  "name": "Shroom",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
  },
  "018": {
-  "name": "Monster #51",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
-  "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "name": "Pest 7",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "019": {
   "name": "Monster #44 (alt colors)",
@@ -97,8 +132,36 @@
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
+ "020": {
+  "name": "Dog 1",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "021": {
+  "name": "Cub",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
  "022": {
   "name": "Monster #23 (alt colors)",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "023": {
+  "name": "Monster #53 (alt colors)",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "024": {
+  "name": "Monster #5 (alt colors)",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
@@ -110,6 +173,13 @@
   "credit": "Original design and sprites by Sanglorian. Other art by Leo, MTC-Studio and Bonny John.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "026": {
+  "name": "Creature 54",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
  },
  "027": {
   "name": "Monster #1",
@@ -126,11 +196,11 @@
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
  "029": {
-  "name": "Monster #47",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
-  "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "name": "Elemental 6",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "030": {
   "name": "Axolightl",
@@ -139,12 +209,103 @@
   "license": "CC BY-SA 4.0",
   "url": "https://github.com/Tuxemon/Tuxemon"
  },
+ "031": {
+  "name": "Creature 32",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "032": {
+  "name": "Aquatic 5",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "033": {
+  "name": "Aquatic 8",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "034": {
+  "name": "Monster #14",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "035": {
+  "name": "Misc 4",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "036": {
+  "name": "Avian 8",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
  "037": {
   "name": "Criniotherme",
   "pack": "Tuxemon Set 1",
   "credit": "Catch Challenger is an open source project, with assets under Creative Commons Attribution. Original design and sprites by Catch Challenger. Sprites tweaked by Sanglorian.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "038": {
+  "name": "Creature 5",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "039": {
+  "name": "Creature 6",
+  "pack": "Various Creatures",
+  "credit": "By GrafxKid",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/various-creatures"
+ },
+ "040": {
+  "name": "Creature 41",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "041": {
+  "name": "Rodent 1",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "042": {
+  "name": "Creature 2",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "043": {
+  "name": "Creature 55",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "044": {
+  "name": "Cat 2",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "045": {
   "name": "Spighter",
@@ -160,6 +321,27 @@
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
+ "047": {
+  "name": "Creature 15",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "048": {
+  "name": "Monster #54 (alt colors)",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "049": {
+  "name": "Demon 8",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
  "050": {
   "name": "Aardorn",
   "pack": "Tuxemon Set 1",
@@ -173,6 +355,13 @@
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "052": {
+  "name": "Elemental 5",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "053": {
   "name": "Monster #41 (alt colors)",
@@ -188,12 +377,19 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "055": {
+  "name": "Cat 6",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
  "056": {
-  "name": "Monster #45 (alt colors)",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
-  "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "name": "Quadraped 9",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "057": {
   "name": "Grintrock",
@@ -201,6 +397,13 @@
   "credit": "Spalding004 has released his Sitran Fakedex under a Creative Commons Attribution 4.0 International licence for us. Original design by Spalding004 and Royaba. Back sprite by Sanglorian. Face sprites tweaked by Sanglorian.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "058": {
+  "name": "Creature 2",
+  "pack": "Various Creatures",
+  "credit": "By GrafxKid",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/various-creatures"
  },
  "059": {
   "name": "Embra",
@@ -230,19 +433,40 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "063": {
+  "name": "Skeleton Sword",
+  "pack": "Nighthawking 2 Battlers",
+  "credit": "By Teo/Saorlaith (@mnaago), commissioned and shared by benamas",
+  "license": "CC BY-SA 4.0",
+  "url": "https://opengameart.org/content/nighthawking-2-battlers"
+ },
  "064": {
-  "name": "Monster #42",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+  "name": "Mimic Chest",
+  "pack": "Nighthawking 2 Battlers",
+  "credit": "By Teo/Saorlaith (@mnaago), commissioned and shared by benamas",
+  "license": "CC BY-SA 4.0",
+  "url": "https://opengameart.org/content/nighthawking-2-battlers"
+ },
+ "065": {
+  "name": "Avian 12",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "066": {
+  "name": "Stomper",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
  },
  "067": {
-  "name": "Monster #2 (alt colors)",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
-  "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "name": "Angry Crow",
+  "pack": "Nighthawking 2 Battlers",
+  "credit": "By Teo/Saorlaith (@mnaago), commissioned and shared by benamas",
+  "license": "CC BY-SA 4.0",
+  "url": "https://opengameart.org/content/nighthawking-2-battlers"
  },
  "068": {
   "name": "Rabbitosaur",
@@ -252,11 +476,11 @@
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
  "069": {
-  "name": "Monster #50 (alt colors)",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
-  "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "name": "Reptile 9",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "070": {
   "name": "Katacoon",
@@ -266,11 +490,11 @@
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
  "071": {
-  "name": "Monster #35 (alt colors)",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
-  "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "name": "Plant 1",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "072": {
   "name": "Axylightl",
@@ -300,12 +524,40 @@
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
+ "076": {
+  "name": "Demon 6",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "077": {
+  "name": "Mimic Door",
+  "pack": "Nighthawking 2 Battlers",
+  "credit": "By Teo/Saorlaith (@mnaago), commissioned and shared by benamas",
+  "license": "CC BY-SA 4.0",
+  "url": "https://opengameart.org/content/nighthawking-2-battlers"
+ },
  "078": {
   "name": "Vivicinder",
   "pack": "Tuxemon Set 1",
   "credit": "Catch Challenger is an open source project, with assets under Creative Commons Attribution. Original design and sprites by Catch Challenger. Face sprites tweaked by Sanglorian.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "079": {
+  "name": "Monster #39",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "080": {
+  "name": "Misc 6",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "081": {
   "name": "K9",
@@ -322,11 +574,25 @@
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
  "083": {
-  "name": "Monster #24",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
-  "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "name": "Cat 1",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "084": {
+  "name": "Slime 2",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "085": {
+  "name": "Quadraped 8",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "086": {
   "name": "Monster #1 (alt colors)",
@@ -336,7 +602,14 @@
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
  "087": {
-  "name": "Monster #16 (alt colors)",
+  "name": "Creature 21",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "088": {
+  "name": "Monster #36 (alt colors)",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
@@ -363,12 +636,47 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
- "095": {
-  "name": "Monster #53",
+ "092": {
+  "name": "Monster #38",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "093": {
+  "name": "Creature 58",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "094": {
+  "name": "Merlicun",
+  "pack": "Tuxemon",
+  "credit": "\"Merlicun\" by Princess-pheonix is licensed under CC-BY-SA 4.0",
+  "license": "CC BY-SA 4.0",
+  "url": "https://github.com/Tuxemon/Tuxemon"
+ },
+ "095": {
+  "name": "Angry Goose",
+  "pack": "Nighthawking 2 Battlers",
+  "credit": "By Teo/Saorlaith (@mnaago), commissioned and shared by benamas",
+  "license": "CC BY-SA 4.0",
+  "url": "https://opengameart.org/content/nighthawking-2-battlers"
+ },
+ "096": {
+  "name": "Monster #17 (alt colors)",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "097": {
+  "name": "Shadow",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
  },
  "098": {
   "name": "Dune Pincher",
@@ -376,6 +684,13 @@
   "credit": "Original design and sprites by tamashihoshi.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "099": {
+  "name": "Creature 13",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
  },
  "100": {
   "name": "Sampsack",
@@ -405,12 +720,26 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "104": {
+  "name": "Husk",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
  "105": {
   "name": "Polyrock",
   "pack": "Tuxemon Set 1",
   "credit": "Catch Challenger is an open source project, with assets under Creative Commons Attribution. Original design and sprites by Catch Challenger. Face sprites tweaked by Sanglorian.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "106": {
+  "name": "Flameling",
+  "pack": "Flamelings",
+  "credit": "By Surt, shared by leeor_net",
+  "license": "CC BY 3.0",
+  "url": "https://opengameart.org/content/flamelings-sprites"
  },
  "107": {
   "name": "Sludgehog",
@@ -419,12 +748,33 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "108": {
+  "name": "Creature 51",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "109": {
+  "name": "Creature 11",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "110": {
+  "name": "Beast",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
  "111": {
-  "name": "Firomenis",
-  "pack": "Tuxemon",
-  "credit": "\"Firomenis\" by Princess-pheonix is licensed under CC-BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "url": "https://github.com/Tuxemon/Tuxemon"
+  "name": "Avian 6",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "112": {
   "name": "Rockitten",
@@ -433,12 +783,26 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "113": {
+  "name": "Seeker",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "114": {
+  "name": "Quadraped 4",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
  "115": {
-  "name": "Selket",
-  "pack": "Tuxemon",
-  "credit": "\"Selket\" by Catch Challenger is licensed under CC-BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "url": "https://github.com/Tuxemon/Tuxemon"
+  "name": "Rodent 3",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "116": {
   "name": "Monster #32",
@@ -446,6 +810,69 @@
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "117": {
+  "name": "Creature 25",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "118": {
+  "name": "FireAnt",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "119": {
+  "name": "Creature 46",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "120": {
+  "name": "Elemental 1",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "121": {
+  "name": "Reptile 7",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "122": {
+  "name": "Avian 9",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "123": {
+  "name": "Quadraped 3",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "124": {
+  "name": "Creature 26",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "125": {
+  "name": "Quadraped 12",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "126": {
   "name": "Masknake",
@@ -462,11 +889,39 @@
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
  "128": {
-  "name": "Monster #48 (alt colors)",
+  "name": "Flamer",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "129": {
+  "name": "Creature 24",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "130": {
+  "name": "Monster #44",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "131": {
+  "name": "Aquatic 3",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "132": {
+  "name": "Creature 8",
+  "pack": "Various Creatures",
+  "credit": "By GrafxKid",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/various-creatures"
  },
  "133": {
   "name": "Monster #40 (alt colors)",
@@ -474,6 +929,13 @@
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "134": {
+  "name": "Demon 9",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "135": {
   "name": "Cataspike",
@@ -483,11 +945,18 @@
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
  "136": {
-  "name": "Monster #38",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+  "name": "Efreet",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "137": {
+  "name": "Undead 6",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "138": {
   "name": "Monster #27 (alt colors)",
@@ -495,6 +964,13 @@
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "139": {
+  "name": "Glace",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
  },
  "140": {
   "name": "Lightmare",
@@ -509,6 +985,20 @@
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "142": {
+  "name": "Wolf",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "143": {
+  "name": "Elemental 2",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "144": {
   "name": "Eaglace",
@@ -531,12 +1021,33 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "147": {
+  "name": "Avian 3",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "148": {
+  "name": "Creature 39",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
  "149": {
   "name": "Tikorch",
   "pack": "Tuxemon Set 1",
   "credit": "Spalding004 has released his Sitran Fakedex under a Creative Commons Attribution 4.0 International licence for us. Original design and sprites by Spalding004. Face sprites by Sanglorian.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "150": {
+  "name": "Dog 7",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "151": {
   "name": "Monster #20 (alt colors)",
@@ -573,6 +1084,13 @@
   "license": "CC BY-SA 4.0",
   "url": "https://github.com/Tuxemon/Tuxemon"
  },
+ "156": {
+  "name": "Envy",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
  "157": {
   "name": "Monster #45",
   "pack": "50+ Monsters Pack 2D",
@@ -587,12 +1105,40 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "159": {
+  "name": "Sludge",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "160": {
+  "name": "Hornet",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
  "161": {
-  "name": "Monster #34",
+  "name": "Owl",
+  "pack": "Nighthawking 2 Battlers",
+  "credit": "By Teo/Saorlaith (@mnaago), commissioned and shared by benamas",
+  "license": "CC BY-SA 4.0",
+  "url": "https://opengameart.org/content/nighthawking-2-battlers"
+ },
+ "162": {
+  "name": "Monster #19 (alt colors)",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "163": {
+  "name": "Harpy",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
  },
  "164": {
   "name": "Monster #23",
@@ -608,6 +1154,13 @@
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
+ "166": {
+  "name": "Creature 37",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
  "167": {
   "name": "Narcileaf",
   "pack": "Tuxemon Set 1",
@@ -616,11 +1169,18 @@
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
  "168": {
-  "name": "Monster #54 (alt colors)",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+  "name": "Creature 50",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "169": {
+  "name": "Creature 59",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
  },
  "170": {
   "name": "Chillimp",
@@ -643,12 +1203,19 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
- "174": {
-  "name": "Monster #39",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+ "173": {
+  "name": "Creature 1",
+  "pack": "Various Creatures",
+  "credit": "By GrafxKid",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/various-creatures"
+ },
+ "174": {
+  "name": "Pest 12",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "175": {
   "name": "Monster #9 (alt colors)",
@@ -672,7 +1239,7 @@
   "url": "https://github.com/Tuxemon/Tuxemon"
  },
  "178": {
-  "name": "Monster #28 (alt colors)",
+  "name": "Monster #55",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
@@ -700,18 +1267,18 @@
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
  "182": {
-  "name": "Monster #39 (alt colors)",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+  "name": "Gator",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
  },
  "183": {
-  "name": "Monster #3",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+  "name": "Twister",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
  },
  "184": {
   "name": "Bigfin",
@@ -727,6 +1294,13 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "186": {
+  "name": "Monster #35 (alt colors)",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
  "187": {
   "name": "Monster #11",
   "pack": "50+ Monsters Pack 2D",
@@ -735,11 +1309,25 @@
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
  "188": {
-  "name": "Monster #17",
+  "name": "Monster #8",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "189": {
+  "name": "Dog 2",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "190": {
+  "name": "Leech",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
  },
  "191": {
   "name": "Hatchling",
@@ -749,11 +1337,18 @@
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
  "192": {
-  "name": "Monster #40",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+  "name": "Creature 3",
+  "pack": "Various Creatures",
+  "credit": "By GrafxKid",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/various-creatures"
+ },
+ "193": {
+  "name": "Creature 16",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
  },
  "194": {
   "name": "Hampotamos",
@@ -762,12 +1357,54 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
- "200": {
-  "name": "Monster #31",
+ "195": {
+  "name": "Pest 8",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "196": {
+  "name": "Creature 20",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "197": {
+  "name": "Spider",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "198": {
+  "name": "Avian 7",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "199": {
+  "name": "Monster #55 (alt colors)",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "200": {
+  "name": "Rocky",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "201": {
+  "name": "Creature 23",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
  },
  "202": {
   "name": "Ferricran",
@@ -775,6 +1412,13 @@
   "credit": "\"Ferricran\" by Spalding004 and Chickenshowman is licensed under CC-BY-SA 4.0",
   "license": "CC BY-SA 4.0",
   "url": "https://github.com/Tuxemon/Tuxemon"
+ },
+ "203": {
+  "name": "Skeleton Fire",
+  "pack": "Nighthawking 2 Battlers",
+  "credit": "By Teo/Saorlaith (@mnaago), commissioned and shared by benamas",
+  "license": "CC BY-SA 4.0",
+  "url": "https://opengameart.org/content/nighthawking-2-battlers"
  },
  "204": {
   "name": "Monster #14 (alt colors)",
@@ -790,12 +1434,33 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "206": {
+  "name": "Goo",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "207": {
+  "name": "Undead 7",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
  "208": {
   "name": "Embazook",
   "pack": "Tuxemon Set 1",
   "credit": "Original design by Leo. Front sprite by josepharaoh99. Other sprites by Sanglorian. Name by josepharaoh99.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "209": {
+  "name": "Plant 8",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "210": {
   "name": "Monster #13",
@@ -810,6 +1475,13 @@
   "credit": "Original design and sprites by josepharaoh99.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "212": {
+  "name": "Creature 61",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
  },
  "213": {
   "name": "Bamboon",
@@ -832,12 +1504,19 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
- "217": {
-  "name": "Monster #37 (alt colors)",
+ "216": {
+  "name": "Monster #43",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "217": {
+  "name": "Daisy",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
  },
  "218": {
   "name": "Flambear",
@@ -875,11 +1554,25 @@
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
  "223": {
-  "name": "Monster #53 (alt colors)",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
-  "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "name": "Dog 3",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "224": {
+  "name": "Demon 10",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "225": {
+  "name": "Flamelord",
+  "pack": "Flamelings",
+  "credit": "By Surt, shared by leeor_net",
+  "license": "CC BY 3.0",
+  "url": "https://opengameart.org/content/flamelings-sprites"
  },
  "226": {
   "name": "Nudikill",
@@ -902,6 +1595,13 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "229": {
+  "name": "Quadraped 6",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
  "230": {
   "name": "Dollfin",
   "pack": "Tuxemon Set 1",
@@ -909,8 +1609,36 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "231": {
+  "name": "Creature 36",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
  "232": {
-  "name": "Monster #31 (alt colors)",
+  "name": "Monster #31",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "233": {
+  "name": "Vulture",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "234": {
+  "name": "Demon 5",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "235": {
+  "name": "Monster #10",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
@@ -930,6 +1658,20 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "238": {
+  "name": "Quadraped 11",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "239": {
+  "name": "Viper",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
  "240": {
   "name": "Agnigon",
   "pack": "Tuxemon Set 1",
@@ -945,11 +1687,11 @@
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
  "242": {
-  "name": "Monster #55 (alt colors)",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+  "name": "Creature 44",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
  },
  "243": {
   "name": "Viviteel",
@@ -957,6 +1699,20 @@
   "credit": "Catch Challenger is an open source project, with assets under Creative Commons Attribution. Original design and sprites by Catch Challenger. Face sprites tweaked by Sanglorian.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "244": {
+  "name": "Pest 6",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "245": {
+  "name": "Creature 22",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
  },
  "246": {
   "name": "Monster #4",
@@ -966,25 +1722,39 @@
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
  "247": {
-  "name": "Merlicun",
-  "pack": "Tuxemon",
-  "credit": "\"Merlicun\" by Princess-pheonix is licensed under CC-BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "url": "https://github.com/Tuxemon/Tuxemon"
+  "name": "Monster #25 (alt colors)",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "248": {
+  "name": "Plant 5",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "249": {
-  "name": "Monster #15",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+  "name": "Creature 9",
+  "pack": "Various Creatures",
+  "credit": "By GrafxKid",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/various-creatures"
+ },
+ "250": {
+  "name": "Creature 1",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
  },
  "251": {
-  "name": "Monster #55",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
-  "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "name": "Plant 3",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "252": {
   "name": "Monster #7",
@@ -994,7 +1764,7 @@
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
  "253": {
-  "name": "Monster #5 (alt colors)",
+  "name": "Monster #50",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
@@ -1021,12 +1791,68 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "257": {
+  "name": "Creature 7",
+  "pack": "Various Creatures",
+  "credit": "By GrafxKid",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/various-creatures"
+ },
+ "258": {
+  "name": "Slime 5",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "259": {
+  "name": "Monster #51",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "260": {
+  "name": "Lich",
+  "pack": "Nighthawking 2 Battlers",
+  "credit": "By Teo/Saorlaith (@mnaago), commissioned and shared by benamas",
+  "license": "CC BY-SA 4.0",
+  "url": "https://opengameart.org/content/nighthawking-2-battlers"
+ },
  "261": {
   "name": "Monster #33",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "262": {
+  "name": "Aquatic 7",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "263": {
+  "name": "Aquatic 6",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "264": {
+  "name": "Creature 10",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "265": {
+  "name": "Creature 48",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
  },
  "266": {
   "name": "Monster #16",
@@ -1036,18 +1862,25 @@
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
  "267": {
-  "name": "Monster #12 (alt colors)",
+  "name": "Monster #40",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
- "269": {
-  "name": "Monster #50",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+ "268": {
+  "name": "Creature 6",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "269": {
+  "name": "Vinester",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
  },
  "270": {
   "name": "Fluttaflap",
@@ -1098,6 +1931,13 @@
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
+ "277": {
+  "name": "Monster #47",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
  "278": {
   "name": "Toufigel",
   "pack": "Tuxemon Set 1",
@@ -1127,11 +1967,25 @@
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
  "282": {
-  "name": "Monster #10",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+  "name": "Ghost",
+  "pack": "Nighthawking 2 Battlers",
+  "credit": "By Teo/Saorlaith (@mnaago), commissioned and shared by benamas",
+  "license": "CC BY-SA 4.0",
+  "url": "https://opengameart.org/content/nighthawking-2-battlers"
+ },
+ "283": {
+  "name": "Stomp",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "284": {
+  "name": "Rage",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
  },
  "285": {
   "name": "Cowpignon",
@@ -1140,12 +1994,19 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
- "287": {
-  "name": "Monster #35",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+ "286": {
+  "name": "Troll",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "287": {
+  "name": "Creature 56",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
  },
  "288": {
   "name": "Monster #49 (alt colors)",
@@ -1154,12 +2015,19 @@
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
+ "289": {
+  "name": "Quadraped 1",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
  "290": {
-  "name": "Monster #25 (alt colors)",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
-  "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "name": "Avian 10",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "291": {
   "name": "Viviphyta",
@@ -1175,12 +2043,40 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "293": {
+  "name": "Octopus",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "294": {
+  "name": "Stray Dog",
+  "pack": "Nighthawking 2 Battlers",
+  "credit": "By Teo/Saorlaith (@mnaago), commissioned and shared by benamas",
+  "license": "CC BY-SA 4.0",
+  "url": "https://opengameart.org/content/nighthawking-2-battlers"
+ },
+ "295": {
+  "name": "Dog 5",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
  "296": {
   "name": "Monster #24 (alt colors)",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "297": {
+  "name": "Demon 4",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "298": {
   "name": "Monster #5",
@@ -1189,12 +2085,33 @@
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
+ "299": {
+  "name": "Wasp",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
  "300": {
   "name": "Monster #47 (alt colors)",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "301": {
+  "name": "Monster #16 (alt colors)",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "302": {
+  "name": "Robe Boy",
+  "pack": "Nighthawking 2 Battlers",
+  "credit": "By Teo/Saorlaith (@mnaago), commissioned and shared by benamas",
+  "license": "CC BY-SA 4.0",
+  "url": "https://opengameart.org/content/nighthawking-2-battlers"
  },
  "303": {
   "name": "Pythwire",
@@ -1224,12 +2141,19 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
- "308": {
-  "name": "Monster #48",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+ "307": {
+  "name": "Creature 67",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "308": {
+  "name": "Creature 33",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
  },
  "309": {
   "name": "Sockeserp",
@@ -1266,12 +2190,19 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "314": {
+  "name": "Rodent 5",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
  "315": {
-  "name": "Monster #28",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+  "name": "Possessed",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
  },
  "316": {
   "name": "Gectile",
@@ -1280,12 +2211,40 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
- "318": {
-  "name": "Monster #46 (alt colors)",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+ "317": {
+  "name": "Creature 35",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "318": {
+  "name": "Creature 9",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "319": {
+  "name": "Millipede",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "320": {
+  "name": "Plant 2",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "321": {
+  "name": "BigBlue",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
  },
  "322": {
   "name": "Snarlon",
@@ -1308,19 +2267,33 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
- "327": {
-  "name": "Monster #19 (alt colors)",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+ "325": {
+  "name": "Creature 27",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "326": {
+  "name": "Bud",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "327": {
+  "name": "Slime 3",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "328": {
-  "name": "Monster #29",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
-  "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "name": "Elemental 9",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "329": {
   "name": "Agnite",
@@ -1337,18 +2310,25 @@
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
  "331": {
-  "name": "Monster #4 (alt colors)",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+  "name": "Fungus",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
  },
  "332": {
-  "name": "Monster #14",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+  "name": "Reptile 8",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "333": {
+  "name": "Thornster",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
  },
  "334": {
   "name": "Drokoro",
@@ -1356,6 +2336,27 @@
   "credit": "Original design and sprites by moritz_gunz. Face sprites tweaked by Sanglorian. Overland sprite by CharlesGabriel. Other art by moritz_gunz.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "335": {
+  "name": "Creature 52",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "336": {
+  "name": "Demon 1",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "337": {
+  "name": "Monster #12 (alt colors)",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
  "338": {
   "name": "Monster #54",
@@ -1372,18 +2373,32 @@
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
  "340": {
-  "name": "Snowrilla",
-  "pack": "Tuxemon",
-  "credit": "\"Snowrilla\" by Chickenshowman is licensed under CC-BY-SA 4.0",
-  "license": "CC BY-SA 4.0",
-  "url": "https://github.com/Tuxemon/Tuxemon"
+  "name": "Plant 6",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "341": {
+  "name": "Magmod",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "342": {
+  "name": "Creature 18",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
  },
  "343": {
-  "name": "Monster #38 (alt colors)",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+  "name": "Toad",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
  },
  "344": {
   "name": "Monster #51 (alt colors)",
@@ -1392,12 +2407,33 @@
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
+ "345": {
+  "name": "Dog 8",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
  "346": {
   "name": "Tourbidi",
   "pack": "Tuxemon Set 1",
   "credit": "Catch Challenger is an open source project, with assets under Creative Commons Attribution. Original design and sprites by Catch Challenger. Face sprites tweaked by Sanglorian.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "347": {
+  "name": "Slime 4",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "348": {
+  "name": "Quadraped 10",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "349": {
   "name": "Fluoresfin",
@@ -1406,12 +2442,54 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "350": {
+  "name": "Flamerider",
+  "pack": "Flamelings",
+  "credit": "By Surt, shared by leeor_net",
+  "license": "CC BY 3.0",
+  "url": "https://opengameart.org/content/flamelings-sprites"
+ },
  "351": {
-  "name": "Monster #36 (alt colors)",
+  "name": "Creature 60",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "352": {
+  "name": "Monster #52",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "353": {
+  "name": "Creature 29",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "354": {
+  "name": "Avian 11",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "355": {
+  "name": "Cerby",
+  "pack": "Nighthawking 2 Battlers",
+  "credit": "By Teo/Saorlaith (@mnaago), commissioned and shared by benamas",
+  "license": "CC BY-SA 4.0",
+  "url": "https://opengameart.org/content/nighthawking-2-battlers"
+ },
+ "356": {
+  "name": "Brain Jar",
+  "pack": "Nighthawking 2 Battlers",
+  "credit": "By Teo/Saorlaith (@mnaago), commissioned and shared by benamas",
+  "license": "CC BY-SA 4.0",
+  "url": "https://opengameart.org/content/nighthawking-2-battlers"
  },
  "357": {
   "name": "Fruitera",
@@ -1420,12 +2498,33 @@
   "license": "CC BY 4.0",
   "url": "https://github.com/Tuxemon/Tuxemon"
  },
+ "358": {
+  "name": "Monster #35",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
  "359": {
   "name": "Monster #6",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "360": {
+  "name": "Monster #3",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "361": {
+  "name": "Undead 5",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "362": {
   "name": "Monster #21",
@@ -1434,12 +2533,47 @@
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
+ "363": {
+  "name": "Slime 1",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "364": {
+  "name": "Snowrilla",
+  "pack": "Tuxemon",
+  "credit": "\"Snowrilla\" by Chickenshowman is licensed under CC-BY-SA 4.0",
+  "license": "CC BY-SA 4.0",
+  "url": "https://github.com/Tuxemon/Tuxemon"
+ },
+ "365": {
+  "name": "Elemental 7",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "366": {
+  "name": "Misc 2",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
  "367": {
   "name": "Nudimind",
   "pack": "Tuxemon Set 1",
   "credit": "Original design by DevilDman. Sprites by Levaine. Back sprite by Sanglorian. Face sprites tweaked by Sanglorian.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "368": {
+  "name": "Reptile 6",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "369": {
   "name": "Heronquak",
@@ -1448,12 +2582,33 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "370": {
+  "name": "Mimic Spellbook",
+  "pack": "Nighthawking 2 Battlers",
+  "credit": "By Teo/Saorlaith (@mnaago), commissioned and shared by benamas",
+  "license": "CC BY-SA 4.0",
+  "url": "https://opengameart.org/content/nighthawking-2-battlers"
+ },
+ "371": {
+  "name": "Monster #37 (alt colors)",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
  "372": {
   "name": "Monster #6 (alt colors)",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "373": {
+  "name": "Creature 5",
+  "pack": "Various Creatures",
+  "credit": "By GrafxKid",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/various-creatures"
  },
  "374": {
   "name": "Puparmor",
@@ -1504,6 +2659,13 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "381": {
+  "name": "Avian 2",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
  "382": {
   "name": "Tweesher",
   "pack": "Tuxemon Set 1",
@@ -1526,11 +2688,11 @@
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
  "385": {
-  "name": "Monster #17 (alt colors)",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+  "name": "Creature 62",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
  },
  "386": {
   "name": "Monster #13 (alt colors)",
@@ -1547,11 +2709,25 @@
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
  "388": {
-  "name": "Monster #18 (alt colors)",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+  "name": "Cat 5",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "389": {
+  "name": "Creature 3",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "390": {
+  "name": "Elemental 3",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "391": {
   "name": "Eruptibus",
@@ -1567,12 +2743,19 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
- "394": {
-  "name": "Monster #44",
+ "393": {
+  "name": "Monster #29",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "394": {
+  "name": "Slime 6",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "395": {
   "name": "Wrougon",
@@ -1581,12 +2764,33 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
- "399": {
-  "name": "Monster #41",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+ "396": {
+  "name": "Slime",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "397": {
+  "name": "Misc 1",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "398": {
+  "name": "Reaper",
+  "pack": "Nighthawking 2 Battlers",
+  "credit": "By Teo/Saorlaith (@mnaago), commissioned and shared by benamas",
+  "license": "CC BY-SA 4.0",
+  "url": "https://opengameart.org/content/nighthawking-2-battlers"
+ },
+ "399": {
+  "name": "Nanner",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
  },
  "400": {
   "name": "Dracune",
@@ -1594,6 +2798,20 @@
   "credit": "Spalding004 has released his Sitran Fakedex under a Creative Commons Attribution 4.0 International licence for us. Original design and sprites by Spalding004. Face sprites tweaked by Sanglorian.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "401": {
+  "name": "Treant",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "402": {
+  "name": "Grinner",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
  },
  "403": {
   "name": "Vivitron",
@@ -1609,15 +2827,29 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "405": {
+  "name": "Pest 2",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
  "406": {
-  "name": "Monster #52",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
-  "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "name": "Pest 11",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "407": {
-  "name": "Monster #8",
+  "name": "Creature 34",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "408": {
+  "name": "Monster #34",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
@@ -1672,6 +2904,13 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "416": {
+  "name": "Monster #4 (alt colors)",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
  "417": {
   "name": "MRmOswitch",
   "pack": "Tuxemon Set 1",
@@ -1714,6 +2953,34 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "423": {
+  "name": "Creature 17",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "424": {
+  "name": "Monster #31 (alt colors)",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "425": {
+  "name": "Undead 4",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "426": {
+  "name": "Monster #42",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
  "427": {
   "name": "Monster #37",
   "pack": "50+ Monsters Pack 2D",
@@ -1721,8 +2988,57 @@
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
+ "428": {
+  "name": "Rodent 2",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "429": {
+  "name": "Creature 8",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "430": {
+  "name": "Avian 5",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
  "431": {
   "name": "Monster #2",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "432": {
+  "name": "Aquatic 4",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "433": {
+  "name": "Candle Knight",
+  "pack": "Nighthawking 2 Battlers",
+  "credit": "By Teo/Saorlaith (@mnaago), commissioned and shared by benamas",
+  "license": "CC BY-SA 4.0",
+  "url": "https://opengameart.org/content/nighthawking-2-battlers"
+ },
+ "434": {
+  "name": "Creature 47",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "435": {
+  "name": "Monster #24",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
@@ -1743,11 +3059,53 @@
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
  "438": {
-  "name": "Monster #43",
+  "name": "Demon 7",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "439": {
+  "name": "Undead 1",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "440": {
+  "name": "Undead 2",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "441": {
+  "name": "Monster #38 (alt colors)",
   "pack": "50+ Monsters Pack 2D",
   "credit": "By isaiah658",
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "442": {
+  "name": "Misc 3",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "443": {
+  "name": "Aquatic 10",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "444": {
+  "name": "Creature 4",
+  "pack": "Various Creatures",
+  "credit": "By GrafxKid",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/various-creatures"
  },
  "445": {
   "name": "Jemuar",
@@ -1756,6 +3114,20 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "446": {
+  "name": "Firomenis",
+  "pack": "Tuxemon",
+  "credit": "\"Firomenis\" by Princess-pheonix is licensed under CC-BY-SA 4.0",
+  "license": "CC BY-SA 4.0",
+  "url": "https://github.com/Tuxemon/Tuxemon"
+ },
+ "447": {
+  "name": "Creature 12",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
  "448": {
   "name": "Botbot",
   "pack": "Tuxemon Set 1",
@@ -1763,12 +3135,75 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "449": {
+  "name": "Coyote",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "450": {
+  "name": "Pest 10",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "451": {
+  "name": "Creature 19",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "452": {
+  "name": "Monster #53",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "453": {
+  "name": "Monster #48",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "454": {
+  "name": "Creature 14",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
  "455": {
   "name": "Conifrost",
   "pack": "Tuxemon Set 1",
   "credit": "Spalding004 has released his Sitran Fakedex under a Creative Commons Attribution 4.0 International licence for us. Original design and sprites by Spalding004. Back sprite by treetrnk. Face sprites tweaked by Sanglorian.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "456": {
+  "name": "Monster #27",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "457": {
+  "name": "Statue",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "458": {
+  "name": "Reptile 5",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "459": {
   "name": "Monster #22",
@@ -1778,11 +3213,18 @@
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
  "460": {
-  "name": "Monster #49",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+  "name": "Creature 45",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
+ },
+ "461": {
+  "name": "Creature 42",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
  },
  "462": {
   "name": "Bugnin",
@@ -1791,12 +3233,33 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "463": {
+  "name": "Aquatic 9",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
  "464": {
   "name": "Cochini",
   "pack": "Tuxemon Set 1",
   "credit": "Catch Challenger is an open source project, with assets under Creative Commons Attribution. Original design and sprites by Catch Challenger. Original design and sprites by Catch Challenger. Face sprites tweaked by Sanglorian.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "465": {
+  "name": "Pest 4",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "466": {
+  "name": "Creature 43",
+  "pack": "Assorted 32x32 creatures",
+  "credit": "By AndHeGames",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/assorted-32x32-creatures"
  },
  "467": {
   "name": "Ignibus",
@@ -1819,12 +3282,40 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
+ "470": {
+  "name": "Monster #39 (alt colors)",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+ },
+ "471": {
+  "name": "Dog 4",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
+ "472": {
+  "name": "Demon 3",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
+ },
  "473": {
   "name": "Aardart",
   "pack": "Tuxemon Set 1",
   "credit": "Released under a Creative Commons Attribution-ShareAlike 3.0 licence in 2010 on DeviantArt. Original design, sprites and name by Magic-Purple-Hermit. Sprites tweaked by Sanglorian. Face sprites by josepharaoh99. Magic-Purple-Hermit would like to be told if the creature is used.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "474": {
+  "name": "Kraken",
+  "pack": "Nighthawking 2 Battlers",
+  "credit": "By Teo/Saorlaith (@mnaago), commissioned and shared by benamas",
+  "license": "CC BY-SA 4.0",
+  "url": "https://opengameart.org/content/nighthawking-2-battlers"
  },
  "475": {
   "name": "Foofle",
@@ -1839,6 +3330,13 @@
   "credit": "Original idea by TheSplashDragon. Design and sprites by tamashihoshi.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "477": {
+  "name": "Monster #50 (alt colors)",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
  "478": {
   "name": "Monster #9",
@@ -1868,12 +3366,26 @@
   "license": "CC0 1.0",
   "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
+ "482": {
+  "name": "Macrocat",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
  "483": {
   "name": "Tumblebee",
   "pack": "Tuxemon Set 1",
   "credit": "Design by josepharaoh99. Sprites by Cavalcadeur. Back sprite by Sanglorian.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "484": {
+  "name": "Monster #17",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
  },
  "485": {
   "name": "Tikoal",
@@ -1896,12 +3408,19 @@
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
  },
- "489": {
-  "name": "Monster #27",
-  "pack": "50+ Monsters Pack 2D",
-  "credit": "By isaiah658",
+ "488": {
+  "name": "Chomper",
+  "pack": "Monster RPG 2",
+  "credit": "By troutsneeze (Nooskewl)",
   "license": "CC0 1.0",
-  "url": "https://opengameart.org/content/50-monsters-pack-2d"
+  "url": "https://opengameart.org/content/main-art-from-monster-rpg-2"
+ },
+ "489": {
+  "name": "Reptile 3",
+  "pack": "DawnLike",
+  "credit": "By DragonDePlatino, palette by DawnBringer",
+  "license": "CC BY 4.0",
+  "url": "https://opengameart.org/content/dawnlike-16x16-universal-rogue-like-tileset-v181"
  },
  "490": {
   "name": "Monster #42 (alt colors)",
@@ -1923,5 +3442,12 @@
   "credit": "Catch Challenger is an open source project, with assets under Creative Commons Attribution. Original design and sprites by Catch Challenger. Face sprites by Sanglorian.",
   "license": "CC BY-SA 4.0",
   "url": "https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations"
+ },
+ "493": {
+  "name": "Monster #49",
+  "pack": "50+ Monsters Pack 2D",
+  "credit": "By isaiah658",
+  "license": "CC0 1.0",
+  "url": "https://opengameart.org/content/50-monsters-pack-2d"
  }
 }

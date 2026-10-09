@@ -24,7 +24,7 @@ EXTRA_TUX = ["fruitera", "axolightl", "ferricran", "merlicun", "firomenis", "sno
 def color_category(img):
     """Dominant Pokédex-style color of a sprite, ignoring outlines and transparent pixels."""
     votes = {}
-    for r, g, b, a in img.getdata():
+    for r, g, b, a in img.get_flattened_data():
         if a < 200: continue
         h, l, s = colorsys.rgb_to_hls(r / 255, g / 255, b / 255)
         if l < .12: continue
@@ -89,11 +89,19 @@ def load_m50(d):
     return out
 
 
+def load_extra():
+    """Sprites sliced by tools/import_more.py (art/extra.json)."""
+    f = ROOT / "art" / "extra.json"
+    if not f.exists(): return []
+    return [{"img": Image.open(ROOT / "art" / "extra" / e["file"]).convert("RGBA"), "elements": [],
+             **{k: e[k] for k in ("name", "pack", "credit", "license", "url")}} for e in json.loads(f.read_text(encoding="utf-8"))]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--tux-set1"); ap.add_argument("--tux-repo"); ap.add_argument("--m50")
     a = ap.parse_args()
-    art = (load_set1(a.tux_set1) if a.tux_set1 else []) + (load_repo(a.tux_repo) if a.tux_repo else []) + (load_m50(a.m50) if a.m50 else [])
+    art = (load_set1(a.tux_set1) if a.tux_set1 else []) + (load_repo(a.tux_repo) if a.tux_repo else []) + (load_m50(a.m50) if a.m50 else []) + load_extra()
     for s in art:
         s["color"] = color_category(s["img"])
         s["key"] = hashlib.md5(s["img"].tobytes()).hexdigest()

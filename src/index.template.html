@@ -861,7 +861,8 @@ function showCredits(){
     return `<tr><td>${esc(p.name)}</td><td>${esc(c.name)}</td><td>${esc(c.credit)}</td><td><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.license)}</a></td></tr>`}).join("");
   $("stage").innerHTML=`<div class="results">
     <h2>Art credits</h2>
-    <p class="verdict">${Object.keys(ART_CREDITS).length} creatures use free, openly licensed sprites from <a href="https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations" target="_blank" rel="noopener">Tuxemon Set 1</a> and the <a href="https://github.com/Tuxemon/Tuxemon" target="_blank" rel="noopener">Tuxemon project</a> (CC BY-SA, shown unmodified), and the <a href="https://opengameart.org/content/50-monsters-pack-2d" target="_blank" rel="noopener">50+ Monsters Pack 2D</a> by isaiah658 (CC0). The rest are original creatures generated for this game.</p>
+    <p class="verdict">Every creature uses a free, openly licensed sprite from one of these packs. Sprites are only cropped or scaled. DawnLike credit also goes to DawnBringer for its palette.</p>
+    <ul class="verdict" style="margin-top:0">${[...new Map(Object.values(ART_CREDITS).map(c=>[c.pack,c])).values()].map(c=>`<li><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.pack)}</a> · ${esc(c.license)}${/^Tuxemon/.test(c.pack)?"":" · "+esc(c.credit)}</li>`).join("")}</ul>
     <div class="actions" style="margin:0 0 12px"><button class="ghost" id="cback">Back</button></div>
     <div class="tablewrap" style="max-height:520px"><table class="roster"><thead><tr><th>Slot</th><th>Sprite</th><th>Credit</th><th>License</th></tr></thead><tbody>${rows}</tbody></table></div>
   </div>`;

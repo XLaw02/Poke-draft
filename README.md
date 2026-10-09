@@ -10,7 +10,14 @@ A single-page drafting game. Pick a pool (Gen 1, 2, 3, 4, or all of Gens 1–4),
 
 ## Sprite art
 
-275 creatures use free, openly licensed sprites (Tuxemon, CC BY-SA; 50+ Monsters Pack 2D, CC0). See CREDITS.md. Re-import with `python3 tools/import_art.py --tux-set1 DIR --tux-repo DIR --m50 DIR`, then `python3 build.py`. The rest use generated pixel sprites.
+All 493 creatures use free, openly licensed sprites from nine packs (Tuxemon, 50+ Monsters Pack 2D, DawnLike, Monster RPG 2, Assorted 32x32 creatures, Nighthawking 2 Battlers, Various Creatures, Flamelings). See CREDITS.md for every artist and license.
+
+To rebuild the art from the downloaded packs:
+1. `python3 tools/import_more.py DOWNLOAD_DIR` slices the extra packs into `art/extra/`.
+2. `python3 tools/import_art.py --tux-set1 DIR --tux-repo DIR --m50 DIR` matches sprites to creatures by element and color and writes `sprites/NNN.png` and `art/credits.json`.
+3. `python3 tools/write_credits.py` then `python3 build.py`.
+
+The generated pixel sprites remain as a fallback for any creature without art.
 
 ## Illustrated art (optional, paid)
 
