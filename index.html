@@ -580,7 +580,7 @@ function creature(p){
   // size from weight, babies smaller
   const lb=p.wt*.2205, sc=L(Math.log10(lb+1),0,3.2,.66,1)*(baby?.9:1);
   const cy=floatY?56:G-20;
-  const aura=p.leg?`<circle cx="50" cy="${cy}" r="40" fill="#f2c14e" opacity=".07"/><circle cx="50" cy="${cy}" r="40" fill="none" stroke="#f2c14e" stroke-width="1.3" stroke-dasharray="2 3" opacity=".85"/>`:"";
+  const aura="";
   const shadow=`<ellipse cx="50" cy="${G+1.5}" rx="${Math.max(10,shadowW)}" ry="3.2" fill="#000" opacity="${floatY?.18:.35}" filter="url(#${U}s)"/>`;
   const svg=`<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>${defs}</defs>${aura}${shadow}<g transform="translate(50 ${G}) scale(${sc.toFixed(3)}) translate(-50 ${-G})">${back}${body}${feat}${front}${sigArt}</g></svg>`;
   SIG_NAME.set(p.id,{gem:"Chest gem",runes:"Glowing runes",mane:"Mane",scarf:"Scarf",antlers:"Crystal antlers",freckles:"Glow freckles",shell:"Back shell",ribbon:"Tail ribbon",orbit:"Orbit ring",lantern:"Lantern orb",paint:"Face paint"}[sig]);
