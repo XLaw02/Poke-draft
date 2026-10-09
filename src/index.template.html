@@ -1,0 +1,516 @@
+<title>Pokémon All-22 Draft</title>
+<meta name="description" content="Draft a full 22-man football roster of Pokémon, one random position at a time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Graduate&family=Saira+Semi+Condensed:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: draft-night war room. Left = the pick on the clock, right = a top-down field that fills in as you draft. Deliberately single-theme (night stadium). */
+:root{
+  color-scheme:dark;
+  --turf:#0d2a1c;         /* page ground, deep night turf */
+  --turf-2:#123825;       /* field stripes */
+  --panel:#0a1f15;        /* raised surfaces */
+  --chalk:#eef3ea;        /* primary text, yard-line white */
+  --chalk-dim:#9fb5a6;    /* secondary text */
+  --line:rgba(238,243,234,.16);
+  --gold:#f2c14e;         /* the one accent: on-the-clock gold */
+  --gold-ink:#1d1606;
+  --good:#5fd38d; --warn:#f2c14e; --bad:#ef6f5e;
+  --f-display:"Graduate","Rockwell","Courier New",serif;
+  --f-body:"Saira Semi Condensed","Arial Narrow","Helvetica Neue",Arial,sans-serif;
+  --r:10px;
+}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{background:var(--turf);color:var(--chalk);font-family:var(--f-body);font-size:15px;line-height:1.45;
+  padding-inline:16px;padding-block:18px 40px;
+  background-image:radial-gradient(1200px 500px at 50% -200px,rgba(242,193,78,.10),transparent 70%);}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible,.choice:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1180px;margin-inline:auto;display:flex;flex-direction:column;gap:18px}
+
+/* ---------- header ---------- */
+header.top{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:12px}
+.brand{display:flex;flex-direction:column;gap:2px}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--chalk-dim);font-weight:600}
+h1{font-family:var(--f-display);font-weight:400;font-size:clamp(28px,5vw,44px);line-height:1;margin:0;letter-spacing:.02em;text-wrap:balance}
+h1 span{color:var(--gold)}
+.meta{display:flex;gap:8px;flex-wrap:wrap}
+.pill{border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:13px;font-weight:600;color:var(--chalk-dim);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pill b{color:var(--chalk)}
+
+/* ---------- layout ---------- */
+.main{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:22px;align-items:start}
+@media (max-width:900px){.main{grid-template-columns:minmax(0,1fr)}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px;min-width:0}
+
+/* ---------- setup ---------- */
+.setup h2,.clock h2,.results h2{font-family:var(--f-display);font-weight:400;font-size:24px;margin:0;text-wrap:balance}
+.setup p.lede{color:var(--chalk-dim);margin:6px 0 16px;max-width:60ch}
+.gens{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+@media (max-width:560px){.gens{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.gen{border:1px solid var(--line);background:transparent;border-radius:8px;padding:12px 6px;display:flex;flex-direction:column;align-items:center;gap:2px;transition:border-color .15s,background .15s}
+.gen .n{font-family:var(--f-display);font-size:22px;line-height:1}
+.gen .r{font-size:12px;color:var(--chalk-dim)}
+.gen[aria-pressed="true"]{border-color:var(--gold);background:rgba(242,193,78,.12)}
+.gen[aria-pressed="true"] .n{color:var(--gold)}
+.opts{display:flex;flex-direction:column;gap:10px;margin:18px 0}
+.opt{display:flex;gap:10px;align-items:flex-start}
+.opt input{margin-top:4px;accent-color:var(--gold);width:16px;height:16px}
+.opt small{display:block;color:var(--chalk-dim)}
+.cta{background:var(--gold);color:var(--gold-ink);border:0;border-radius:8px;padding:12px 22px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;font-size:15px}
+.cta:hover{filter:brightness(1.07)}
+.ghost{background:transparent;border:1px solid var(--line);border-radius:8px;padding:9px 14px;font-weight:600;font-size:14px}
+.ghost:hover{border-color:var(--chalk-dim)}
+.ghost:disabled{opacity:.4;cursor:not-allowed}
+.rules{margin:18px 0 0;padding:14px 0 0;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;font-size:13px;color:var(--chalk-dim)}
+.rules b{display:block;color:var(--chalk);font-size:14px}
+@media (max-width:560px){.rules{grid-template-columns:minmax(0,1fr)}}
+.best{font-size:13px;color:var(--chalk-dim);margin-top:12px}
+
+/* ---------- on the clock ---------- */
+.clockhead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.slotcall{display:flex;align-items:center;gap:14px}
+.slotbadge{font-family:var(--f-display);background:var(--gold);color:var(--gold-ink);border-radius:8px;min-width:64px;height:64px;padding:0 8px;display:grid;place-items:center;font-size:24px}
+.slotbadge.spin{animation:flick .09s steps(1) infinite}
+@keyframes flick{50%{filter:brightness(1.4)}}
+.slotcall .lbl{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--chalk-dim);font-weight:700}
+.slotcall .pos{font-size:20px;font-weight:700;line-height:1.15}
+.slotcall .want{font-size:13px;color:var(--chalk-dim)}
+.choices{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+@media (max-width:640px){.choices{grid-template-columns:minmax(0,1fr)}}
+
+/* jersey card: original design, colored by primary/secondary type */
+.choice{--c1:#888;--c2:#555;position:relative;text-align:left;border:1px solid var(--line);border-radius:12px;background:var(--turf);padding:0;overflow:hidden;display:flex;flex-direction:column;transition:transform .15s,border-color .15s;animation:deal .35s both}
+.choice:nth-child(2){animation-delay:.06s}.choice:nth-child(3){animation-delay:.12s}
+@keyframes deal{from{opacity:.0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.choice:hover{transform:translateY(-3px);border-color:var(--gold)}
+.jersey{position:relative;height:118px;background:linear-gradient(135deg,var(--c1) 0 62%,var(--c2) 62% 100%);display:grid;place-items:center;
+  clip-path:polygon(22% 0,36% 0,42% 9%,58% 9%,64% 0,78% 0,100% 16%,100% 100%,0 100%,0 16%)}
+.jersey::after{content:"";position:absolute;inset:auto 0 18px 0;height:8px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.55) 0 22%,transparent 22% 26%);opacity:.5}
+.jnum{font-family:var(--f-display);font-size:52px;line-height:1;color:#fff;text-shadow:0 2px 0 rgba(0,0,0,.35),0 0 0 #000;-webkit-text-stroke:1px rgba(0,0,0,.35)}
+.legend{position:absolute;top:24px;right:10px;font-size:10px;font-weight:800;letter-spacing:.12em;background:rgba(0,0,0,.45);color:var(--gold);border-radius:4px;padding:2px 6px}
+.cbody{padding:12px 12px 14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cname{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.cname b{font-size:18px;line-height:1.1;min-width:0;overflow-wrap:anywhere}
+.ovr{font-family:var(--f-display);font-size:26px;line-height:1;font-variant-numeric:tabular-nums}
+.ovr small{display:block;font-family:var(--f-body);font-size:10px;letter-spacing:.14em;color:var(--chalk-dim);text-align:right}
+.ovr.hide{color:var(--chalk-dim)}
+.types{display:flex;gap:4px;flex-wrap:wrap}
+.type{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:1px 7px;border-radius:4px;color:#fff;text-shadow:0 1px 0 rgba(0,0,0,.35)}
+.combine{font-size:12px;color:var(--chalk-dim);font-variant-numeric:tabular-nums}
+.stats{display:grid;grid-template-columns:auto 1fr 28px;gap:3px 6px;align-items:center;font-size:11px;font-variant-numeric:tabular-nums}
+.stats span{color:var(--chalk-dim);font-weight:600}
+.stats i{display:block;height:6px;border-radius:3px;background:var(--line);position:relative;overflow:hidden}
+.stats i::before{content:"";position:absolute;inset:0 auto 0 0;width:var(--w);background:var(--chalk-dim);border-radius:3px}
+.stats i.key::before{background:var(--gold)}
+.stats em{font-style:normal;text-align:right}
+.fit{font-size:12px;color:var(--good);font-weight:600;min-height:1em}
+.clockfoot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px;flex-wrap:wrap;font-size:13px;color:var(--chalk-dim)}
+.ticker{font-size:13px;color:var(--chalk-dim);margin-top:12px;min-height:1.4em}
+.ticker b{color:var(--chalk)}
+
+/* ---------- field ---------- */
+.fieldwrap{display:flex;flex-direction:column;gap:10px}
+.fieldhead{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.fieldhead h3{margin:0;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--chalk-dim)}
+.field{position:relative;width:100%;max-width:100%;aspect-ratio:3/4;border-radius:var(--r);overflow:hidden;border:2px solid var(--line);
+  background:
+   repeating-linear-gradient(180deg,transparent 0 calc(10% - 1px),rgba(238,243,234,.22) calc(10% - 1px) 10%),
+   repeating-linear-gradient(180deg,var(--turf-2) 0 10%,var(--turf) 10% 20%);}
+.field .los{position:absolute;left:0;right:0;top:50%;height:2px;background:var(--gold);opacity:.55}
+.field .lbl{position:absolute;left:8px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--chalk-dim);font-weight:700}
+.chip{position:absolute;transform:translate(-50%,-50%);width:9.6%;min-width:30px;display:flex;flex-direction:column;align-items:center;gap:1px;text-align:center}
+.dot{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:10px;font-weight:800;border:2px dashed rgba(238,243,234,.35);color:var(--chalk-dim);background:rgba(0,0,0,.25);letter-spacing:.02em}
+.chip.filled .dot{border:2px solid rgba(255,255,255,.85);color:#fff;background:linear-gradient(135deg,var(--c1) 0 60%,var(--c2) 60%);font-family:var(--f-display);font-size:12px;text-shadow:0 1px 0 rgba(0,0,0,.5)}
+.chip.now .dot{border:2px solid var(--gold);color:var(--gold);box-shadow:0 0 0 4px rgba(242,193,78,.25);animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 8px rgba(242,193,78,.08)}}
+.chip .nm{font-size:10px;line-height:1.1;font-weight:600;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--chalk)}
+.chip .sub{font-size:9px;color:var(--chalk-dim);font-variant-numeric:tabular-nums}
+@media (max-width:480px){.dot{width:24px;height:24px;font-size:8px}.chip.filled .dot{font-size:10px}.chip .nm{font-size:9px}}
+
+/* ---------- results ---------- */
+.score{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;margin:14px 0 6px}
+.grade{font-family:var(--f-display);font-size:76px;line-height:.9;color:var(--gold);min-width:1.4em;text-align:center}
+.bars{display:flex;flex-direction:column;gap:8px}
+.bar{display:grid;grid-template-columns:72px 1fr 34px;gap:8px;align-items:center;font-size:13px;font-variant-numeric:tabular-nums}
+.bar span{color:var(--chalk-dim);font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:11px}
+.bar i{height:10px;border-radius:5px;background:var(--line);position:relative;overflow:hidden}
+.bar i::before{content:"";position:absolute;inset:0 auto 0 0;width:var(--w);background:var(--gold);border-radius:5px;transition:width .8s}
+.bar b{text-align:right}
+.verdict{color:var(--chalk-dim);margin:8px 0 14px;max-width:60ch}
+.awards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:16px}
+@media (max-width:480px){.awards{grid-template-columns:minmax(0,1fr)}}
+.award{border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.award span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--chalk-dim);font-weight:700}
+.award b{font-size:16px}
+.award small{color:var(--chalk-dim)}
+.roster{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+.roster th{text-align:left;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--chalk-dim);font-weight:700;padding:6px 6px;border-bottom:1px solid var(--line)}
+.roster td{padding:6px;border-bottom:1px solid var(--line)}
+.roster td.o{text-align:right;font-weight:700}
+.tablewrap{overflow-x:auto;max-height:320px;overflow-y:auto}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.toast{font-size:13px;color:var(--good);min-height:1.2em;margin-top:8px}
+.sharebox{width:100%;margin-top:8px;background:var(--turf);color:var(--chalk);border:1px solid var(--line);border-radius:8px;padding:8px;font:12px/1.4 ui-monospace,Menlo,monospace;resize:vertical}
+
+.o-hi{color:var(--good)}.o-mid{color:var(--chalk)}.o-lo{color:var(--bad)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <div class="eyebrow">Pokémon Draft Night</div>
+      <h1>All-22 <span>Draft</span></h1>
+    </div>
+    <div class="meta" id="meta"></div>
+  </header>
+
+  <div class="main">
+    <section class="panel" id="stage" aria-live="polite"></section>
+    <aside class="panel fieldwrap">
+      <div class="fieldhead"><h3>Depth chart</h3><span class="pill" id="filled">0 / 22 filled</span></div>
+      <div class="field" id="field" role="img" aria-label="Football field showing drafted Pokémon by position"></div>
+    </aside>
+  </div>
+</div>
+
+<script>
+/* [id, name, gen, types, [hp,atk,def,spa,spd,spe], height_dm, weight_hg, legendary] */
+const DEX = /*DATA*/[];
+
+const STAT_NAMES = ["HP","ATK","DEF","SPA","SPD","SPE"];
+const TYPE_COLORS = {normal:"#9a9a7a",fire:"#e0702a",water:"#4f7fe0",electric:"#d9b400",grass:"#5ea83a",ice:"#5cbcbc",fighting:"#b02a24",poison:"#93389a",ground:"#c7a24a",flying:"#8a78d8",psychic:"#e04a78",bug:"#8f9c1c",rock:"#a8902e",ghost:"#5c4888",dragon:"#5b2ee8",dark:"#5a463a",steel:"#8a8aa8",fairy:"#d47a94"};
+const GENS = [
+  {id:"1",n:"I",r:"Kanto · 151",set:[1]},
+  {id:"2",n:"II",r:"Johto · 100",set:[2]},
+  {id:"3",n:"III",r:"Hoenn · 135",set:[3]},
+  {id:"4",n:"IV",r:"Sinnoh · 107",set:[4]},
+  {id:"all",n:"ALL",r:"Gens 1–4 · 493",set:[1,2,3,4]},
+];
+
+/* Position archetypes: stat weights [hp,atk,def,spa,spd,spe], scheme-fit types, size preference */
+const ROLES = {
+  QB:{name:"Quarterback",w:[.15,0,0,.45,.25,.15],key:[3,4],fit:["psychic","dragon","steel"],want:"Special Attack is arm strength, Sp. Def is poise in the pocket.",val:2},
+  RB:{name:"Running Back",w:[.25,.35,0,0,0,.4],key:[1,5],fit:["fighting","ground","normal"],want:"Speed and Attack to break tackles, HP to carry the load.",val:1.2},
+  WR:{name:"Wide Receiver",w:[0,.15,0,.15,.15,.55],key:[5],fit:["flying","electric"],want:"Speed above all. Lighter frames get open.",val:1.1,size:"light"},
+  TE:{name:"Tight End",w:[.2,.3,.25,0,0,.25],key:[1,2,5],fit:["water","ground","fighting"],want:"Half blocker, half receiver: Attack, Defense and Speed.",val:1},
+  OL:{name:"Offensive Line",w:[.35,.2,.45,0,0,0],key:[0,2],fit:["rock","steel","ground"],want:"Defense and HP to hold the line. Heavy is good.",val:1,size:"heavy"},
+  DE:{name:"Defensive End",w:[.15,.35,.2,0,0,.3],key:[1,5],fit:["fighting","dark","dragon"],want:"Attack and Speed to get around the edge.",val:1.1},
+  DT:{name:"Defensive Tackle",w:[.3,.35,.35,0,0,0],key:[0,1,2],fit:["rock","ground","steel"],want:"Attack, Defense and HP to eat double teams. Heavy is good.",val:1,size:"heavy"},
+  LB:{name:"Linebacker",w:[.2,.35,.2,0,0,.25],key:[1,5],fit:["fighting","dark","bug"],want:"Attack to hit, Speed to chase, HP to last.",val:1.1},
+  CB:{name:"Cornerback",w:[0,0,.2,0,.3,.5],key:[4,5],fit:["flying","electric","dark"],want:"Speed to mirror receivers, Sp. Def to win the ball.",val:1.1,size:"light"},
+  S:{name:"Safety",w:[0,.2,.2,0,.25,.35],key:[4,5],fit:["psychic","dark","flying"],want:"Range and instincts: Speed, Sp. Def and a little hitting.",val:1},
+};
+
+/* 22 slots with field coordinates (% of field). Offense attacks upward from the bottom half. */
+const SLOTS = [
+  {id:"QB", r:"QB", side:"O", x:50, y:70},
+  {id:"RB", r:"RB", side:"O", x:50, y:84},
+  {id:"WR1",r:"WR", side:"O", x:7,  y:56},
+  {id:"WR2",r:"WR", side:"O", x:93, y:56},
+  {id:"WR3",r:"WR", side:"O", x:19, y:62},
+  {id:"TE", r:"TE", side:"O", x:81, y:60},
+  {id:"LT", r:"OL", side:"O", x:30, y:56},
+  {id:"LG", r:"OL", side:"O", x:40, y:56},
+  {id:"C",  r:"OL", side:"O", x:50, y:56},
+  {id:"RG", r:"OL", side:"O", x:60, y:56},
+  {id:"RT", r:"OL", side:"O", x:70, y:56},
+  {id:"LDE",r:"DE", side:"D", x:30, y:44},
+  {id:"LDT",r:"DT", side:"D", x:43, y:44},
+  {id:"RDT",r:"DT", side:"D", x:57, y:44},
+  {id:"RDE",r:"DE", side:"D", x:70, y:44},
+  {id:"WLB",r:"LB", side:"D", x:30, y:32},
+  {id:"MLB",r:"LB", side:"D", x:50, y:31},
+  {id:"SLB",r:"LB", side:"D", x:70, y:32},
+  {id:"CB1",r:"CB", side:"D", x:7,  y:40},
+  {id:"CB2",r:"CB", side:"D", x:93, y:40},
+  {id:"FS", r:"S",  side:"D", x:36, y:15},
+  {id:"SS", r:"S",  side:"D", x:64, y:17},
+];
+
+const P = DEX.map(d=>({id:d[0],name:d[1],gen:d[2],types:d[3],st:d[4],h:d[5],wt:d[6],leg:!!d[7]}));
+const byId = new Map(P.map(p=>[p.id,p]));
+
+function rate(p, roleKey){
+  const R = ROLES[roleKey];
+  const raw = R.w.reduce((s,w,i)=>s+w*p.st[i],0);
+  let ovr = 35 + raw*0.5;
+  const notes = [];
+  const fitT = p.types.filter(t=>R.fit.includes(t));
+  if (fitT.length){ ovr += 3; notes.push(`${cap(fitT[0])}-type scheme fit +3`); }
+  const lb = p.wt*0.2205;
+  if (R.size==="heavy" && lb>=300){ ovr += 2; notes.push("Big frame +2"); }
+  if (R.size==="heavy" && lb<40){ ovr -= 3; notes.push("Undersized −3"); }
+  if (R.size==="light" && lb<=180 && lb>=10){ ovr += 2; notes.push("Light frame +2"); }
+  if (R.size==="light" && lb>=600){ ovr -= 3; notes.push("Too heavy −3"); }
+  return {ovr:Math.max(30,Math.min(99,Math.round(ovr))), notes};
+}
+const cap = s=>s[0].toUpperCase()+s.slice(1);
+const fmtH = dm=>{const inch=Math.round(dm*3.937);return `${Math.floor(inch/12)}′${inch%12}″`};
+const fmtW = hg=>`${Math.round(hg*0.2205).toLocaleString()} lb`;
+const oClass = o=>o>=85?"o-hi":o<65?"o-lo":"o-mid";
+const shuffle = a=>{for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+
+/* ---------- state ---------- */
+let S = {phase:"setup", gen:"all", legends:true, blind:false, roster:{}, slot:null, offer:[], rerolls:2, log:[]};
+
+const store = {
+  get(k){try{return JSON.parse(localStorage.getItem(k))}catch(e){return null}},
+  set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+};
+
+function pool(){
+  const set = GENS.find(g=>g.id===S.gen).set;
+  const taken = new Set(Object.values(S.roster).map(r=>r.id));
+  return P.filter(p=>set.includes(p.gen) && (S.legends || !p.leg) && !taken.has(p.id));
+}
+
+function startDraft(){
+  const prefs = {gen:S.gen,legends:S.legends,blind:S.blind};
+  store.set("all22.prefs",prefs);
+  S = {...S, phase:"draft", roster:{}, slot:null, offer:[], rerolls:2, log:[]};
+  nextPick(true);
+}
+
+function nextPick(first){
+  const open = SLOTS.filter(s=>!S.roster[s.id]);
+  if (!open.length){ S.phase="done"; saveBest(); render(); return; }
+  S.slot = open[Math.floor(Math.random()*open.length)].id;
+  S.offer = shuffle(pool()).slice(0,3).map(p=>p.id);
+  render(first ? false : true);
+}
+
+function reroll(){
+  if (S.rerolls<=0) return;
+  S.rerolls--;
+  const prev = new Set(S.offer);
+  const fresh = shuffle(pool().filter(p=>!prev.has(p.id)));
+  S.offer = fresh.slice(0,3).map(p=>p.id);
+  render(false);
+}
+
+function pick(pid){
+  const slot = SLOTS.find(s=>s.id===S.slot);
+  const p = byId.get(pid);
+  const {ovr} = rate(p, slot.r);
+  const best = Math.max(...S.offer.map(id=>rate(byId.get(id),slot.r).ovr));
+  S.roster[slot.id] = {id:pid, ovr, best};
+  S.log.unshift({slot:slot.id, name:p.name, ovr, best});
+  nextPick(false);
+}
+
+function teamScore(){
+  let s=0,w=0,os=0,ow=0,ds=0,dw=0;
+  for (const sl of SLOTS){
+    const r=S.roster[sl.id]; if(!r) continue;
+    const v=ROLES[sl.r].val; s+=r.ovr*v; w+=v;
+    if(sl.side==="O"){os+=r.ovr*v;ow+=v}else{ds+=r.ovr*v;dw+=v}
+  }
+  return {team:w?s/w:0, off:ow?os/ow:0, def:dw?ds/dw:0};
+}
+function grade(t){
+  const g=[[90,"A+"],[86,"A"],[83,"A−"],[80,"B+"],[77,"B"],[74,"B−"],[71,"C+"],[68,"C"],[65,"C−"],[61,"D"],[0,"F"]];
+  return g.find(([c])=>t>=c)[1];
+}
+function bestKey(){ return `all22.best.${S.gen}.${S.legends?"L":"N"}`; }
+function saveBest(){
+  const t = teamScore().team, prev = store.get(bestKey());
+  S.newBest = !prev || t>prev;
+  if (S.newBest) store.set(bestKey(), +t.toFixed(1));
+}
+
+/* ---------- rendering ---------- */
+const $ = id=>document.getElementById(id);
+const esc = s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const colors = p=>`--c1:${TYPE_COLORS[p.types[0]]};--c2:${TYPE_COLORS[p.types[1]||p.types[0]]}`;
+const typeTags = p=>p.types.map(t=>`<span class="type" style="background:${TYPE_COLORS[t]}">${t}</span>`).join("");
+
+function renderMeta(){
+  const g = GENS.find(g=>g.id===S.gen);
+  const picks = Object.keys(S.roster).length;
+  const ts = teamScore();
+  $("meta").innerHTML = S.phase==="setup"
+    ? `<span class="pill">22 rounds · 3 choices a pick</span>`
+    : `<span class="pill">Pool <b>Gen ${g.n}</b></span><span class="pill">${S.phase==="done"?"<b>Final</b>":`Round <b>${picks+1}</b> of 22`}</span><span class="pill">Team OVR <b>${picks?ts.team.toFixed(1):"—"}</b></span>`;
+  $("filled").textContent = `${picks} / 22 filled`;
+}
+
+function renderField(){
+  const f = $("field");
+  let h = `<div class="los"></div><span class="lbl" style="top:6px">Defense</span><span class="lbl" style="bottom:6px">Offense</span>`;
+  for (const s of SLOTS){
+    const r = S.roster[s.id];
+    if (r){
+      const p = byId.get(r.id);
+      h += `<div class="chip filled" style="left:${s.x}%;top:${s.y}%;${colors(p)}" title="${esc(s.id)}: ${esc(p.name)} (${r.ovr} OVR)"><div class="dot">${r.ovr}</div><div class="nm">${esc(p.name)}</div><div class="sub">${s.id}</div></div>`;
+    } else {
+      const now = S.phase==="draft" && S.slot===s.id;
+      h += `<div class="chip${now?" now":""}" style="left:${s.x}%;top:${s.y}%"><div class="dot">${s.id}</div>${now?'<div class="sub" style="color:var(--gold)">on the clock</div>':""}</div>`;
+    }
+  }
+  f.innerHTML = h;
+}
+
+function renderSetup(){
+  const best = GENS.map(g=>({g, v:store.get(`all22.best.${g.id}.${S.legends?"L":"N"}`)})).filter(x=>x.v);
+  $("stage").innerHTML = `
+    <div class="setup">
+      <h2>Pick your draft pool</h2>
+      <p class="lede">You will fill all 22 starting spots: 11 on offense, 11 on defense. Each round the draft board spins to a random open position and deals you three Pokémon. Take one. Their base stats decide how well they play that spot.</p>
+      <div class="gens" role="group" aria-label="Generation">
+        ${GENS.map(g=>`<button class="gen" id="gen-${g.id}" data-gen="${g.id}" aria-pressed="${S.gen===g.id}"><span class="n">${g.n}</span><span class="r">${g.r}</span></button>`).join("")}
+      </div>
+      <div class="opts">
+        <label class="opt"><input type="checkbox" id="opt-leg" ${S.legends?"checked":""}><span>Allow legendary and mythical Pokémon<small>Turn off for a fairer pool without Mewtwo-tier picks.</small></span></label>
+        <label class="opt"><input type="checkbox" id="opt-blind" ${S.blind?"checked":""}><span>Blind draft<small>Hide each Pokémon's position rating until after you pick. You scout from base stats only.</small></span></label>
+      </div>
+      <button class="cta" id="go">Start the draft</button>
+      ${best.length?`<div class="best">Your best team OVR (${S.legends?"legends on":"legends off"}): ${best.map(x=>`Gen ${x.g.n} <b>${x.v}</b>`).join(" · ")}</div>`:""}
+      <div class="rules">
+        <div><b>Random position</b>Any open slot can come up next, so plan for scarcity.</div>
+        <div><b>Three choices</b>Every Pokémon can be drafted only once.</div>
+        <div><b>Two re-rolls</b>Redeal the three choices when all of them are wrong for the spot.</div>
+      </div>
+    </div>`;
+  document.querySelectorAll(".gen").forEach(b=>b.onclick=()=>{S.gen=b.dataset.gen;render()});
+  $("opt-leg").onchange=e=>{S.legends=e.target.checked;render()};
+  $("opt-blind").onchange=e=>{S.blind=e.target.checked};
+  $("go").onclick=startDraft;
+}
+
+function card(p, roleKey){
+  const R = ROLES[roleKey], {ovr,notes} = rate(p, roleKey);
+  const stats = p.st.map((v,i)=>`<span>${STAT_NAMES[i]}</span><i class="${R.key.includes(i)?"key":""}" style="--w:${Math.min(100,v/1.6)}%"></i><em>${v}</em>`).join("");
+  return `<button class="choice" data-id="${p.id}" style="${colors(p)}" aria-label="Draft ${esc(p.name)}">
+    <div class="jersey"><span class="jnum">${String(p.id).padStart(3,"0").slice(-3)}</span>${p.leg?'<span class="legend">LEGEND</span>':""}</div>
+    <div class="cbody">
+      <div class="cname"><b>${esc(p.name)}</b><span class="ovr ${S.blind?"hide":oClass(ovr)}">${S.blind?"??":ovr}<small>OVR</small></span></div>
+      <div class="types">${typeTags(p)}</div>
+      <div class="combine">${fmtH(p.h)} · ${fmtW(p.wt)} · Gen ${["","I","II","III","IV"][p.gen]}</div>
+      <div class="stats">${stats}</div>
+      <div class="fit">${S.blind?"":notes.join(" · ")}</div>
+    </div>
+  </button>`;
+}
+
+function renderDraft(spin){
+  const slot = SLOTS.find(s=>s.id===S.slot), R = ROLES[slot.r];
+  const last = S.log[0];
+  const lastTxt = last ? (S.blind && last.ovr<last.best
+      ? `Last pick: <b>${esc(last.name)}</b> at ${last.slot}, ${last.ovr} OVR. The best of that deal was ${last.best}.`
+      : `Last pick: <b>${esc(last.name)}</b> at ${last.slot}, ${last.ovr} OVR.`) : "Your first pick is on the clock.";
+  $("stage").innerHTML = `
+    <div class="clock">
+      <div class="clockhead">
+        <div class="slotcall">
+          <div class="slotbadge${spin?" spin":""}" id="badge">${spin?"···":slot.id}</div>
+          <div><div class="lbl">On the clock</div><div class="pos">${R.name} <span style="color:var(--chalk-dim);font-weight:500">· ${slot.id}</span></div><div class="want">${R.want}</div></div>
+        </div>
+      </div>
+      <div class="choices" id="choices">${spin?"":S.offer.map(id=>card(byId.get(id),slot.r)).join("")}</div>
+      <div class="clockfoot">
+        <button class="ghost" id="reroll" ${S.rerolls<=0||spin?"disabled":""}>Re-roll choices (${S.rerolls} left)</button>
+        <span>Gold bars mark the stats this position values.</span>
+      </div>
+      <div class="ticker">${lastTxt}</div>
+    </div>`;
+  $("reroll").onclick = reroll;
+  bindChoices();
+  if (spin) spinReveal(slot);
+}
+
+function bindChoices(){
+  document.querySelectorAll(".choice").forEach(b=>b.onclick=()=>pick(+b.dataset.id));
+}
+
+let spinTimer=null;
+function spinReveal(slot){
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const badge = $("badge"); const open = SLOTS.filter(s=>!S.roster[s.id]);
+  let n = reduce?0:9;
+  clearInterval(spinTimer);
+  const finish = ()=>{
+    clearInterval(spinTimer);
+    badge.classList.remove("spin"); badge.textContent = slot.id;
+    $("choices").innerHTML = S.offer.map(id=>card(byId.get(id),slot.r)).join("");
+    $("reroll").disabled = S.rerolls<=0;
+    bindChoices();
+  };
+  if (!n) return finish();
+  spinTimer = setInterval(()=>{
+    badge.textContent = open[Math.floor(Math.random()*open.length)].id;
+    if (--n<=0) finish();
+  },70);
+}
+
+function renderDone(){
+  const ts = teamScore(), g = grade(ts.team);
+  const rows = SLOTS.map(s=>({s, r:S.roster[s.id], p:byId.get(S.roster[s.id].id)}));
+  const best = [...rows].sort((a,b)=>b.r.ovr-a.r.ovr)[0];
+  const weak = [...rows].sort((a,b)=>a.r.ovr-b.r.ovr)[0];
+  const missed = rows.reduce((s,x)=>s+(x.r.best-x.r.ovr),0);
+  const steals = rows.filter(x=>x.r.ovr===x.r.best).length;
+  const gen = GENS.find(x=>x.id===S.gen);
+  const verdict = ts.team>=86?"A dynasty roster. Nobody in this pool is beating this lineup."
+    : ts.team>=78?"Playoff team. A couple of spots away from a title run."
+    : ts.team>=70?"Solid starters with a few holes the scouts will flag."
+    : "Rebuilding year. The draft board did you no favors, or the other way around.";
+  const share = `Pokémon All-22 Draft · Gen ${gen.n}${S.legends?"":" (no legends)"}${S.blind?" · blind":""}\nGrade ${g} · Team ${ts.team.toFixed(1)} · OFF ${ts.off.toFixed(1)} · DEF ${ts.def.toFixed(1)}\nQB ${byId.get(S.roster.QB.id).name} · MVP ${best.p.name} (${best.s.id} ${best.r.ovr})`;
+  $("stage").innerHTML = `
+    <div class="results">
+      <div class="eyebrow">Draft complete${S.newBest?" · New personal best":""}</div>
+      <h2>Your All-22 is set</h2>
+      <div class="score">
+        <div class="grade" aria-label="Grade ${g}">${g}</div>
+        <div class="bars">
+          <div class="bar"><span>Team</span><i style="--w:${ts.team}%"></i><b>${ts.team.toFixed(1)}</b></div>
+          <div class="bar"><span>Offense</span><i style="--w:${ts.off}%"></i><b>${ts.off.toFixed(1)}</b></div>
+          <div class="bar"><span>Defense</span><i style="--w:${ts.def}%"></i><b>${ts.def.toFixed(1)}</b></div>
+        </div>
+      </div>
+      <p class="verdict">${verdict} QB counts double in the team score.</p>
+      <div class="awards">
+        <div class="award"><span>Draft MVP</span><b>${esc(best.p.name)}</b> <small>${best.s.id} · ${best.r.ovr} OVR</small></div>
+        <div class="award"><span>Weak link</span><b>${esc(weak.p.name)}</b> <small>${weak.s.id} · ${weak.r.ovr} OVR</small></div>
+        <div class="award"><span>Best-available picks</span><b>${steals} of 22</b> <small>took the top-rated option</small></div>
+        <div class="award"><span>Rating left on the board</span><b>${missed}</b> <small>OVR points vs. best option each round</small></div>
+      </div>
+      <div class="tablewrap"><table class="roster">
+        <thead><tr><th>Pos</th><th>Pokémon</th><th>Type</th><th style="text-align:right">OVR</th><th style="text-align:right">Best offered</th></tr></thead>
+        <tbody>${rows.map(x=>`<tr><td>${x.s.id}</td><td>${esc(x.p.name)}</td><td>${x.p.types.map(cap).join("/")}</td><td class="o ${oClass(x.r.ovr)}">${x.r.ovr}</td><td class="o" style="color:var(--chalk-dim)">${x.r.best}</td></tr>`).join("")}</tbody>
+      </table></div>
+      <div class="actions">
+        <button class="cta" id="again">Draft again</button>
+        <button class="ghost" id="newpool">Change pool</button>
+        <button class="ghost" id="copy">Copy result</button>
+      </div>
+      <div class="toast" id="toast"></div>
+      <textarea class="sharebox" id="sharebox" rows="3" readonly hidden>${esc(share)}</textarea>
+    </div>`;
+  $("again").onclick = startDraft;
+  $("newpool").onclick = ()=>{S.phase="setup";S.roster={};S.log=[];render()};
+  $("copy").onclick = ()=>{
+    const done=()=>{$("toast").textContent="Copied to clipboard."};
+    const fail=()=>{const t=$("sharebox");t.hidden=false;t.select();$("toast").textContent="Select the text below and copy it."};
+    try{navigator.clipboard.writeText(share).then(done,fail)}catch(e){fail()}
+  };
+}
+
+function render(spin){
+  renderMeta(); renderField();
+  if (S.phase==="setup") renderSetup();
+  else if (S.phase==="draft") renderDraft(spin);
+  else renderDone();
+}
+
+function start(saved){
+  const prefs = store.get("all22.prefs");
+  if (prefs) S = {...S, ...prefs};
+  if (saved && saved.phase) S = {...S, ...saved};
+  render();
+}
+window.claude?.hot?.snapshot?.(()=>S);
+window.claude?.hot?.ready ? window.claude.hot.ready(start) : start(window.claude?.hot?.data ?? {});
+</script>
