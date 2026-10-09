@@ -91,7 +91,7 @@ h1 span{color:var(--gold)}
 .jersey::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(255,255,255,.18),rgba(0,0,0,.45) 75%);z-index:0}
 .jersey .art{position:absolute;inset:6px 0 0 0;display:grid;place-items:center;z-index:1}.sprite{image-rendering:pixelated;image-rendering:crisp-edges;opacity:0;transition:opacity .15s}
 .sprite.ready{opacity:1}
-.sprite.art-img{image-rendering:auto}
+
 .sprite.big{width:128px;height:128px;margin-top:-6px;filter:drop-shadow(0 3px 0 rgba(0,0,0,.28));animation:idle 1.6s steps(2,jump-none) infinite}
 .choice:nth-child(2) .sprite.big{animation-delay:-.5s}.choice:nth-child(3) .sprite.big{animation-delay:-1s}
 @keyframes idle{0%{transform:translateY(0) scaleY(1)}100%{transform:translateY(-2px) scaleY(1.02)}}
@@ -162,6 +162,7 @@ h1 span{color:var(--gold)}
 .roster td.o{text-align:right;font-weight:700}
 .tablewrap{overflow-x:auto;max-height:320px;overflow-y:auto}
 .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.results a{color:var(--gold)}
 .toast{font-size:13px;color:var(--good);min-height:1.2em;margin-top:8px}
 .sharebox{width:100%;margin-top:8px;background:var(--turf);color:var(--chalk);border:1px solid var(--line);border-radius:8px;padding:8px;font:12px/1.4 ui-monospace,Menlo,monospace;resize:vertical}
 
@@ -673,9 +674,11 @@ function spriteSrc(p){
     img.src=url;}
   return null;
 }
-/* Illustrated art from tools/generate_sprites.py, when present; build.py fills this list. */
-const ART_IDS = new Set(/*ART*/[]);
-function spriteImg(p,cls){if(ART_IDS.has(p.id))return `<img class="sprite art-img ready ${cls}" src="sprites/${String(p.id).padStart(3,"0")}.png" alt="" width="${SPR}" height="${SPR}">`;const s=spriteSrc(p);return `<img class="sprite ${cls}${s?" ready":""}" data-sid="${p.id}" src="${s||BLANK}" alt="" width="${SPR}" height="${SPR}">`;}
+/* Openly licensed sprite art (tools/import_art.py) or generated art; build.py fills these in.
+   ART: {id: data URI}. ART_CREDITS: {id: {name, pack, credit, license, url}}. */
+const ART = /*ART*/{};
+const ART_CREDITS = /*CREDITS*/{};
+function spriteImg(p,cls){if(ART[p.id])return `<img class="sprite art-img ready ${cls}" src="${ART[p.id]}" alt="" width="${SPR}" height="${SPR}">`;const s=spriteSrc(p);return `<img class="sprite ${cls}${s?" ready":""}" data-sid="${p.id}" src="${s||BLANK}" alt="" width="${SPR}" height="${SPR}">`;}
 const typeTags = p=>p.types.map(t=>`<span class="type" style="background:${TYPE_COLORS[t]}">${t}</span>`).join("");
 
 function renderMeta(){
@@ -717,7 +720,7 @@ function renderSetup(){
         <label class="opt"><input type="checkbox" id="opt-leg" ${S.legends?"checked":""}><span>Allow legendary and mythical Pokémon<small>Turn off for a fairer pool without Mewtwo-tier picks.</small></span></label>
         <label class="opt"><input type="checkbox" id="opt-blind" ${S.blind?"checked":""}><span>Blind draft<small>Hide each Pokémon's position rating until after you pick. You scout from base stats only.</small></span></label>
       </div>
-      <button class="cta" id="go">Start the draft</button>
+      <div class="actions" style="margin-top:0"><button class="cta" id="go">Start the draft</button><button class="ghost" id="credits">Art credits</button></div>
       ${best.length?`<div class="best">Your best team OVR (${S.legends?"legends on":"legends off"}): ${best.map(x=>`Gen ${x.g.n} <b>${x.v}</b>`).join(" · ")}</div>`:""}
       <div class="rules">
         <div><b>Random position</b>Any open slot can come up next, so plan for scarcity.</div>
@@ -729,6 +732,7 @@ function renderSetup(){
   $("opt-leg").onchange=e=>{S.legends=e.target.checked;render()};
   $("opt-blind").onchange=e=>{S.blind=e.target.checked};
   $("go").onclick=startDraft;
+  $("credits").onclick=showCredits;
 }
 
 function card(p, roleKey){
@@ -739,7 +743,7 @@ function card(p, roleKey){
     <div class="cbody">
       <div class="cname"><b>${esc(p.name)}</b><span class="ovr ${S.blind?"hide":oClass(ovr)}">${S.blind?"??":ovr}<small>OVR</small></span></div>
       <div class="types">${typeTags(p)}</div>
-      <div class="combine">${fmtH(p.h)} · ${fmtW(p.wt)} · Gen ${["","I","II","III","IV"][p.gen]}</div><div class="combine">Signature: ${SIG_NAME.get(p.id)||""}</div>
+      <div class="combine">${fmtH(p.h)} · ${fmtW(p.wt)} · Gen ${["","I","II","III","IV"][p.gen]}</div><div class="combine">${ART_CREDITS[p.id]?`Art: ${esc(ART_CREDITS[p.id].name)} · ${esc(ART_CREDITS[p.id].pack)}`:`Signature: ${SIG_NAME.get(p.id)||""}`}</div>
       <div class="stats">${stats}</div>
       <div class="fit">${S.blind?"":notes.join(" · ")}</div>
     </div>
@@ -836,17 +840,32 @@ function renderDone(){
         <button class="cta" id="again">Draft again</button>
         <button class="ghost" id="newpool">Change pool</button>
         <button class="ghost" id="copy">Copy result</button>
+        <button class="ghost" id="credits">Art credits</button>
       </div>
       <div class="toast" id="toast"></div>
       <textarea class="sharebox" id="sharebox" rows="3" readonly hidden>${esc(share)}</textarea>
     </div>`;
   $("again").onclick = startDraft;
   $("newpool").onclick = ()=>{S.phase="setup";S.roster={};S.log=[];render()};
+  $("credits").onclick = showCredits;
   $("copy").onclick = ()=>{
     const done=()=>{$("toast").textContent="Copied to clipboard."};
     const fail=()=>{const t=$("sharebox");t.hidden=false;t.select();$("toast").textContent="Select the text below and copy it."};
     try{navigator.clipboard.writeText(share).then(done,fail)}catch(e){fail()}
   };
+}
+
+function showCredits(){
+  const back=S.phase;
+  const rows=Object.entries(ART_CREDITS).map(([id,c])=>{const p=byId.get(+id);
+    return `<tr><td>${esc(p.name)}</td><td>${esc(c.name)}</td><td>${esc(c.credit)}</td><td><a href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.license)}</a></td></tr>`}).join("");
+  $("stage").innerHTML=`<div class="results">
+    <h2>Art credits</h2>
+    <p class="verdict">${Object.keys(ART_CREDITS).length} creatures use free, openly licensed sprites from <a href="https://opengameart.org/content/tuxemon-set-1-154-monsters-front-and-back-sprites-and-menu-animations" target="_blank" rel="noopener">Tuxemon Set 1</a> and the <a href="https://github.com/Tuxemon/Tuxemon" target="_blank" rel="noopener">Tuxemon project</a> (CC BY-SA, shown unmodified), and the <a href="https://opengameart.org/content/50-monsters-pack-2d" target="_blank" rel="noopener">50+ Monsters Pack 2D</a> by isaiah658 (CC0). The rest are original creatures generated for this game.</p>
+    <div class="actions" style="margin:0 0 12px"><button class="ghost" id="cback">Back</button></div>
+    <div class="tablewrap" style="max-height:520px"><table class="roster"><thead><tr><th>Slot</th><th>Sprite</th><th>Credit</th><th>License</th></tr></thead><tbody>${rows}</tbody></table></div>
+  </div>`;
+  $("cback").onclick=()=>render();
 }
 
 function render(spin){

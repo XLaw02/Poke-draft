@@ -8,7 +8,11 @@ A single-page drafting game. Pick a pool (Gen 1, 2, 3, 4, or all of Gens 1–4),
 - `pokemon-data.json`: names, generation, types, base stats, height and weight for #1–493, built from the PokeAPI CSV data.
 - Edit the game in `src/index.template.html`, then run `python3 build.py` to rebuild `index.html` with the data inlined.
 
-## Illustrated art (optional)
+## Sprite art
+
+275 creatures use free, openly licensed sprites (Tuxemon, CC BY-SA; 50+ Monsters Pack 2D, CC0). See CREDITS.md. Re-import with `python3 tools/import_art.py --tux-set1 DIR --tux-repo DIR --m50 DIR`, then `python3 build.py`. The rest use generated pixel sprites.
+
+## Illustrated art (optional, paid)
 
 Generated images replace the pixel sprites automatically, one creature at a time.
 
