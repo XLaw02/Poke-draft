@@ -85,10 +85,12 @@ h1 span{color:var(--gold)}
 .choice:nth-child(2){animation-delay:.06s}.choice:nth-child(3){animation-delay:.12s}
 @keyframes deal{from{opacity:.0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .choice:hover{transform:translateY(-3px);border-color:var(--gold)}
-.jersey{position:relative;height:118px;background:linear-gradient(135deg,var(--c1) 0 62%,var(--c2) 62% 100%);display:grid;place-items:center;
+.jersey{position:relative;height:132px;background:linear-gradient(135deg,var(--c1) 0 62%,var(--c2) 62% 100%);display:grid;place-items:center;
   clip-path:polygon(22% 0,36% 0,42% 9%,58% 9%,64% 0,78% 0,100% 16%,100% 100%,0 100%,0 16%)}
-.jersey::after{content:"";position:absolute;inset:auto 0 18px 0;height:8px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.55) 0 22%,transparent 22% 26%);opacity:.5}
-.jnum{font-family:var(--f-display);font-size:52px;line-height:1;color:#fff;text-shadow:0 2px 0 rgba(0,0,0,.35),0 0 0 #000;-webkit-text-stroke:1px rgba(0,0,0,.35)}
+.jersey::after{content:"";position:absolute;inset:auto 0 6px 0;height:8px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.55) 0 22%,transparent 22% 26%);opacity:.5}
+.jersey::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(255,255,255,.18),rgba(0,0,0,.45) 75%);z-index:0}
+.jersey .art{position:absolute;inset:6px 0 0 0;display:grid;place-items:center;z-index:1}.jersey .art svg{height:120px;width:120px;max-width:100%;filter:drop-shadow(0 2px 0 rgba(0,0,0,.2))}
+.jnum{position:absolute;left:10px;top:22px;z-index:2;font-family:var(--f-display);font-size:13px;line-height:1;color:#fff;background:rgba(0,0,0,.35);border-radius:4px;padding:3px 6px}
 .legend{position:absolute;top:24px;right:10px;font-size:10px;font-weight:800;letter-spacing:.12em;background:rgba(0,0,0,.45);color:var(--gold);border-radius:4px;padding:2px 6px}
 .cbody{padding:12px 12px 14px;display:flex;flex-direction:column;gap:8px;flex:1}
 .cname{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
@@ -122,12 +124,14 @@ h1 span{color:var(--gold)}
 .field .lbl{position:absolute;left:8px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--chalk-dim);font-weight:700}
 .chip{position:absolute;transform:translate(-50%,-50%);width:9.6%;min-width:30px;display:flex;flex-direction:column;align-items:center;gap:1px;text-align:center}
 .dot{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:10px;font-weight:800;border:2px dashed rgba(238,243,234,.35);color:var(--chalk-dim);background:rgba(0,0,0,.25);letter-spacing:.02em}
-.chip.filled .dot{border:2px solid rgba(255,255,255,.85);color:#fff;background:linear-gradient(135deg,var(--c1) 0 60%,var(--c2) 60%);font-family:var(--f-display);font-size:12px;text-shadow:0 1px 0 rgba(0,0,0,.5)}
+.chip.filled .dot{width:40px;height:40px;border:2px solid rgba(255,255,255,.85);background:radial-gradient(circle at 50% 40%,rgba(255,255,255,.28),rgba(0,0,0,.35));overflow:hidden}
+.chip.filled .dot svg{width:100%;height:100%;transform:scale(1.25) translateY(-4%)}
+.chip .sub b{font-weight:800}
 .chip.now .dot{border:2px solid var(--gold);color:var(--gold);box-shadow:0 0 0 4px rgba(242,193,78,.25);animation:pulse 1.2s ease-in-out infinite}
 @keyframes pulse{50%{box-shadow:0 0 0 8px rgba(242,193,78,.08)}}
 .chip .nm{font-size:10px;line-height:1.1;font-weight:600;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--chalk)}
 .chip .sub{font-size:9px;color:var(--chalk-dim);font-variant-numeric:tabular-nums}
-@media (max-width:480px){.dot{width:24px;height:24px;font-size:8px}.chip.filled .dot{font-size:10px}.chip .nm{font-size:9px}}
+@media (max-width:480px){.dot{width:24px;height:24px;font-size:8px}.chip.filled .dot{width:30px;height:30px}.chip .nm{font-size:9px}}
 
 /* ---------- results ---------- */
 .score{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;margin:14px 0 6px}
@@ -325,6 +329,95 @@ function saveBest(){
 const $ = id=>document.getElementById(id);
 const esc = s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const colors = p=>`--c1:${TYPE_COLORS[p.types[0]]};--c2:${TYPE_COLORS[p.types[1]||p.types[0]]}`;
+/* ---------- original creature generator ----------
+   Every Pokémon gets a unique, original creature drawn from its own data:
+   types set colors and a type feature, stats set body shape, weight sets size. */
+function rng32(seed){return ()=>{seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function shade(hex,f){const n=parseInt(hex.slice(1),16);let r=n>>16,g=n>>8&255,b=n&255;
+  const m=f<0?0:255,a=Math.abs(f);r=Math.round(r+(m-r)*a);g=Math.round(g+(m-g)*a);b=Math.round(b+(m-b)*a);
+  return "#"+((1<<24)|(r<<16)|(g<<8)|b).toString(16).slice(1)}
+const svgCache=new Map();
+function creature(p){
+  if(svgCache.has(p.id))return svgCache.get(p.id);
+  const R=rng32(p.id*7919+13), [hp,atk,def,spa,spd,spe]=p.st;
+  const t0=p.types[0], t1=p.types[1];
+  const c1=TYPE_COLORS[t0], c2=t1?TYPE_COLORS[t1]:shade(c1,.45), ink="#17140f", dk=shade(c1,-.35);
+  const L=(v,a,b,lo,hi)=>lo+(Math.max(a,Math.min(b,v))-a)/(b-a)*(hi-lo);
+  const ghost=t0==="ghost"||(t1==="ghost"&&R()<.5);
+  const fly=!ghost&&(t0==="flying"||t1==="flying");
+  const bw=L((hp+def)/2,20,150,28,58), bh=L(hp*.6+def*.4,20,160,24,42);
+  const leg=ghost?0:L(spe,10,150,5,18), quad=!ghost&&bw>44&&R()<.6;
+  const ground=88, by=ground-leg-bh/2-(ghost?10:0), bx=50-(quad?6:0);
+  const top=by-bh/2, hr=quad?L(spa+atk,40,260,10,15):L(bw,28,58,12,17);
+  const hx=quad?bx+bw/2-hr*.5:bx, hy=quad?top+hr*.3:top-hr*.55;
+  const sw=`stroke="${ink}" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"`;
+  let back="", body="", front="";
+  // tail
+  const tl=L(spe+atk,40,280,8,22), tside=quad?-1:(R()<.5?-1:1), tx=bx+tside*bw/2*.85, ty=by+bh*.1;
+  if(!ghost){back+=`<path d="M${tx} ${ty} q${tside*tl*.7} ${-tl*.2} ${tside*tl} ${-tl}" fill="none" ${sw} stroke-width="5"/><path d="M${tx} ${ty} q${tside*tl*.7} ${-tl*.2} ${tside*tl} ${-tl}" fill="none" stroke="${c1}" stroke-width="2.4" stroke-linecap="round"/>`;}
+  const tipX=tx+tside*tl, tipY=ty-tl;
+  // legs
+  if(!ghost){const xs=quad?[bx-bw*.35,bx-bw*.12,bx+bw*.12,bx+bw*.35]:[bx-bw*.22,bx+bw*.22], lw=L(def,20,180,5,9);
+    xs.forEach((x,i)=>{const f=quad&&(i===1||i===2)?dk:c1;
+      (quad&&(i===1||i===2)?back:body); const leg$=`<rect x="${x-lw/2}" y="${by+bh*.2}" width="${lw}" height="${ground-by-bh*.2}" rx="${lw/2}" fill="${f}" ${sw}/>`;
+      if(quad&&(i===1||i===2))back+=leg$;else body+=leg$;});}
+  // wings
+  if(fly){const ws=L(spe,30,150,14,24);[-1,1].forEach(d=>{back+=`<path d="M${bx+d*bw*.25} ${by-bh*.15} q${d*ws} ${-ws*1.1} ${d*ws*1.3} ${-ws*.2} q${-d*ws*.35} ${ws*.15} ${-d*ws*.55} ${ws*.4} q${-d*ws*.3} ${-ws*.05} ${-d*ws*.75} ${ws*.15}z" fill="${t1==="flying"?c2:shade(c1,.25)}" ${sw}/>`;});}
+  // body
+  if(ghost){body+=`<path d="M${bx-bw/2} ${by} a${bw/2} ${bh/2} 0 0 1 ${bw} 0 v${bh*.55} l${-bw/6} ${-5} l${-bw/6} 5 l${-bw/6} -5 l${-bw/6} 5 l${-bw/6} -5 l${-bw/6} 5z" fill="${c1}" ${sw}/>`;}
+  else body+=`<ellipse cx="${bx}" cy="${by}" rx="${bw/2}" ry="${bh/2}" fill="${c1}" ${sw}/>`;
+  body+=`<ellipse cx="${bx+(quad?4:0)}" cy="${by+bh*.15}" rx="${bw*.3}" ry="${bh*.28}" fill="${c2}" opacity=".9"/>`;
+  // pattern from secondary stats
+  const pat=Math.floor(R()*3);
+  if(t1&&pat===0){for(let i=0;i<3;i++)body+=`<circle cx="${bx-bw*.3+R()*bw*.25}" cy="${by-bh*.25+R()*bh*.3}" r="${1.6+R()*2}" fill="${c2}"/>`;}
+  if(pat===1&&!ghost){for(let i=-1;i<=1;i++)body+=`<path d="M${bx+i*bw*.14-2} ${top+2} l2 ${bh*.22} l2 ${-bh*.22}" fill="${dk}"/>`;}
+  // head
+  if(quad||R()<.7){body+=`<circle cx="${hx}" cy="${hy}" r="${hr}" fill="${c1}" ${sw}/>`;}
+  else{body+=`<ellipse cx="${hx}" cy="${hy+2}" rx="${hr*1.15}" ry="${hr*.85}" fill="${c1}" ${sw}/>`;}
+  // ears or horns (attack)
+  const horns=atk>=110?2:atk>=75?1:0, ears=R()<.55;
+  if(ears&&!horns){[-1,1].forEach(d=>{front+=`<path d="M${hx+d*hr*.45} ${hy-hr*.75} l${d*hr*.35} ${-hr*.75} l${-d*hr*.55} ${hr*.45}z" fill="${c1}" ${sw}/>`;});}
+  if(horns===1)front+=`<path d="M${hx-3} ${hy-hr*.85} l3 ${-L(atk,75,110,7,11)} l3 ${L(atk,75,110,7,11)}z" fill="#f4ecd8" ${sw}/>`;
+  if(horns===2)[-1,1].forEach(d=>{const hl=L(atk,110,190,8,14);front+=`<path d="M${hx+d*hr*.35} ${hy-hr*.8} q${d*hl*.6} ${-hl*.4} ${d*hl*.5} ${-hl}" fill="none" stroke="${ink}" stroke-width="5" stroke-linecap="round"/><path d="M${hx+d*hr*.35} ${hy-hr*.8} q${d*hl*.6} ${-hl*.4} ${d*hl*.5} ${-hl}" fill="none" stroke="#f4ecd8" stroke-width="2.6" stroke-linecap="round"/>`;});
+  // eyes (special attack = bigger eyes)
+  const ne=R()<.1?1:R()<.92?2:3, er=L(spa,20,150,2.2,4.4), ex=quad?hx+hr*.2:hx, ey=hy-hr*.05;
+  const eyePos=ne===1?[[ex,ey]]:ne===2?[[ex-hr*.38,ey],[ex+hr*.38,ey]]:[[ex-hr*.42,ey+1],[ex,ey-hr*.3],[ex+hr*.42,ey+1]];
+  const fierce=atk>spa+20;
+  eyePos.forEach(([x,y])=>{front+=`<circle cx="${x}" cy="${y}" r="${er}" fill="#fff" ${sw} stroke-width="1.2"/><circle cx="${x+er*.25}" cy="${y+er*.1}" r="${er*.55}" fill="${ink}"/><circle cx="${x+er*.45}" cy="${y-er*.25}" r="${er*.2}" fill="#fff"/>`;
+    if(fierce)front+=`<path d="M${x-er*1.2} ${y-er*1.3} L${x+er*1.1} ${y-er*.7}" stroke="${ink}" stroke-width="1.6" stroke-linecap="round"/>`;});
+  // mouth
+  const mx=ex, my=hy+hr*.5;
+  front+= atk>=95?`<path d="M${mx-4} ${my} q4 3 8 0" fill="none" stroke="${ink}" stroke-width="1.4"/><path d="M${mx-2.6} ${my+.6} l1 2.4 l1 -2.1 M${mx+.6} ${my+.9} l1 2.3 l1 -2.5" fill="#fff" stroke="${ink}" stroke-width=".7"/>`
+     : `<path d="M${mx-3} ${my} q3 2.5 6 0" fill="none" stroke="${ink}" stroke-width="1.4" stroke-linecap="round"/>`;
+  // type feature
+  const ft={
+    fire:()=>`<path d="M${tipX} ${tipY+3} q-5 -5 0 -12 q1 5 4 4 q2 6 -4 8z" fill="#ffb02e" ${sw} stroke-width="1.2"/>`,
+    water:()=>`<path d="M${bx-bw*.1} ${top+3} q${bw*.15} ${-12} ${bw*.3} ${-2}z" fill="${shade(c1,.35)}" ${sw}/>`,
+    grass:()=>`<path d="M${hx} ${hy-hr} q-9 -6 -10 -14 q9 1 10 14z M${hx} ${hy-hr} q8 -4 10 -11 q-8 0 -10 11z" fill="#7fd04b" ${sw} stroke-width="1.3"/>`,
+    electric:()=>`<path d="M${tipX} ${tipY+2} l4 -6 l-3 0 l4 -7 l-7 8 l3 0 z" fill="#ffe14d" ${sw} stroke-width="1.2"/>`,
+    ice:()=>[-1,0,1].map(i=>`<path d="M${bx+i*bw*.2-3} ${top+3} l3 -9 l3 9z" fill="#d6f6ff" ${sw} stroke-width="1.2"/>`).join(""),
+    fighting:()=>`<rect x="${hx-hr}" y="${hy-hr*.55}" width="${hr*2}" height="3.4" fill="#e23a2e" ${sw} stroke-width="1"/>`,
+    poison:()=>[0,1].map(i=>`<path d="M${bx-bw*.25+i*bw*.45} ${by+bh*.3} q-2 4 0 5 q2 -1 0 -5z" fill="#c85cd6" ${sw} stroke-width=".9"/>`).join(""),
+    ground:()=>[0,1,2].map(i=>`<path d="M${bx-bw*.32+i*4} ${by-bh*.05} l3 ${bh*.25}" stroke="${shade(c1,-.45)}" stroke-width="1.8" stroke-linecap="round"/>`).join(""),
+    psychic:()=>`<circle cx="${hx}" cy="${hy-hr*.55}" r="2.6" fill="#ff7bb0" ${sw} stroke-width="1"/>`,
+    bug:()=>[-1,1].map(d=>`<path d="M${hx+d*3} ${hy-hr*.9} q${d*3} -8 ${d*8} -10" fill="none" stroke="${ink}" stroke-width="1.5"/><circle cx="${hx+d*11}" cy="${hy-hr*.9-10}" r="2" fill="${c2}" ${sw} stroke-width="1"/>`).join(""),
+    rock:()=>[0,1].map(i=>`<path d="M${bx-bw*.3+i*bw*.32} ${top+bh*.2} l5 -4 l6 2 l-1 6 l-7 1z" fill="${shade(c1,-.2)}" ${sw} stroke-width="1.1"/>`).join(""),
+    ghost:()=>`<circle cx="${hx+hr+6}" cy="${hy-hr}" r="3" fill="${shade(c1,.5)}" opacity=".8"/>`,
+    dragon:()=>[0,1,2].map(i=>`<path d="M${bx-bw*.3+i*bw*.18} ${top+1+i*.3} l${bw*.07} -8 l${bw*.07} 8z" fill="${c2}" ${sw} stroke-width="1.1"/>`).join(""),
+    dark:()=>`<rect x="${hx-hr*.95}" y="${hy-hr*.35}" width="${hr*1.9}" height="${hr*.55}" rx="2" fill="${ink}" opacity=".55"/>`,
+    steel:()=>[0,1,2].map(i=>`<circle cx="${bx-bw*.25+i*bw*.25}" cy="${by-bh*.25}" r="1.6" fill="#e9eef5" ${sw} stroke-width=".8"/>`).join(""),
+    fairy:()=>`<path d="M${hx+hr*.8} ${hy-hr*.9} l1.5 3.5 l3.8 .4 l-2.9 2.4 l.9 3.7 l-3.3 -2 l-3.3 2 l.9 -3.7 l-2.9 -2.4 l3.8 -.4z" fill="#ffd1e3" ${sw} stroke-width="1"/>`,
+    normal:()=>`<path d="M${hx-4} ${hy-hr*.92} q2 -6 4 -1 q2 -6 4 1" fill="${shade(c1,-.15)}" ${sw} stroke-width="1.2"/>`,
+    flying:()=>`<path d="M${hx-2} ${hy-hr*.95} q1 -7 5 -8 q-1 5 -3 8" fill="${shade(c1,.3)}" ${sw} stroke-width="1"/>`
+  };
+  const feat=(ft[t0]||ft.normal)()+(t1&&t1!==t0&&ft[t1]&&R()<.6?ft[t1]():"");
+  // size from weight
+  const lb=p.wt*.2205, sc=L(Math.log10(lb+1),0,3.2,.68,1);
+  const aura=p.leg?`<circle cx="50" cy="${by}" r="${Math.max(bw,bh)*.85+6}" fill="none" stroke="#f2c14e" stroke-width="1.6" stroke-dasharray="3 3" opacity=".9"/>`:"";
+  const shadow=`<ellipse cx="50" cy="${ground+2}" rx="${bw*.55}" ry="3" fill="#000" opacity=".25"/>`;
+  const svg=`<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">${shadow}<g transform="translate(50 ${ground}) scale(${sc.toFixed(3)}) translate(-50 ${-ground})">${aura}${back}${body}${feat}${front}</g></svg>`;
+  svgCache.set(p.id,svg); return svg;
+}
 const typeTags = p=>p.types.map(t=>`<span class="type" style="background:${TYPE_COLORS[t]}">${t}</span>`).join("");
 
 function renderMeta(){
@@ -344,7 +437,7 @@ function renderField(){
     const r = S.roster[s.id];
     if (r){
       const p = byId.get(r.id);
-      h += `<div class="chip filled" style="left:${s.x}%;top:${s.y}%;${colors(p)}" title="${esc(s.id)}: ${esc(p.name)} (${r.ovr} OVR)"><div class="dot">${r.ovr}</div><div class="nm">${esc(p.name)}</div><div class="sub">${s.id}</div></div>`;
+      h += `<div class="chip filled" style="left:${s.x}%;top:${s.y}%;${colors(p)}" title="${esc(s.id)}: ${esc(p.name)} (${r.ovr} OVR)"><div class="dot">${creature(p)}</div><div class="nm">${esc(p.name)}</div><div class="sub">${s.id} · <b class="${oClass(r.ovr)}">${r.ovr}</b></div></div>`;
     } else {
       const now = S.phase==="draft" && S.slot===s.id;
       h += `<div class="chip${now?" now":""}" style="left:${s.x}%;top:${s.y}%"><div class="dot">${s.id}</div>${now?'<div class="sub" style="color:var(--gold)">on the clock</div>':""}</div>`;
@@ -384,7 +477,7 @@ function card(p, roleKey){
   const R = ROLES[roleKey], {ovr,notes} = rate(p, roleKey);
   const stats = p.st.map((v,i)=>`<span>${STAT_NAMES[i]}</span><i class="${R.key.includes(i)?"key":""}" style="--w:${Math.min(100,v/1.6)}%"></i><em>${v}</em>`).join("");
   return `<button class="choice" data-id="${p.id}" style="${colors(p)}" aria-label="Draft ${esc(p.name)}">
-    <div class="jersey"><span class="jnum">${String(p.id).padStart(3,"0").slice(-3)}</span>${p.leg?'<span class="legend">LEGEND</span>':""}</div>
+    <div class="jersey"><div class="art">${creature(p)}</div><span class="jnum">#${String(p.id).padStart(3,"0")}</span>${p.leg?'<span class="legend">LEGEND</span>':""}</div>
     <div class="cbody">
       <div class="cname"><b>${esc(p.name)}</b><span class="ovr ${S.blind?"hide":oClass(ovr)}">${S.blind?"??":ovr}<small>OVR</small></span></div>
       <div class="types">${typeTags(p)}</div>
